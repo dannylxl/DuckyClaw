@@ -74,6 +74,9 @@ jobs:
 
     - name: Copy config file
       run: |
+        # Create cache directory and copy config
+        mkdir -p .build/cache
+        cp -f app_default.config .build/cache/using.config
         cp -f .build/cache/using.config TuyaOpen/
 
     - name: Build Firmware
