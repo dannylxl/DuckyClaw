@@ -23,28 +23,32 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Init submodules and T5AI platform
+    - name: Init TuyaOpen submodules
       run: |
-        # Ensure all submodules are initialized recursively (full clone)
+        # Initialize TuyaOpen submodules
         git submodule sync --recursive
         git submodule update --init --recursive
-        # Check and initialize TuyaOpen's internal submodules
+        # Initialize TuyaOpen's internal submodules
         cd TuyaOpen
         git submodule sync --recursive
         git submodule update --init --recursive
-        # Clone T5AI platform (it's not a submodule, but a separate repo)
+
+    - name: Clone T5AI Platform
+      run: |
+        cd TuyaOpen
+        # Clone T5AI platform if not exists
         if [ ! -d "platform/T5AI" ]; then
           echo "Cloning T5AI platform..."
+          mkdir -p platform
           git clone --depth 1 https://github.com/tuya/TuyaOpen-T5AI.git platform/T5AI
         fi
-        # Verify T5AI platform exists
+        # Verify T5AI platform
+        ls -la platform/
         if [ ! -f "platform/T5AI/t5_os/build.sh" ]; then
           echo "ERROR: T5AI platform build.sh not found!"
-          ls -la platform/ 2>/dev/null || echo "No platform dir"
           exit 1
         fi
-        echo "T5AI platform verified:"
-        ls -la platform/T5AI/t5_os/ | head -20
+        echo "T5AI platform ready!"
 
     - name: Setup Python
       uses: actions/setup-python@v5
@@ -57,7 +61,7 @@ jobs:
         sudo apt-get install -y git wget build-essential python3-venv
         pip install -r TuyaOpen/requirements.txt
 
-    - name: Setup T5AI Platform
+    - name: Setup ARM Toolchain
       run: |
         cd TuyaOpen
         # Set up git safe directories
@@ -72,12 +76,13 @@ jobs:
         fi
         echo "ARM toolchain ready"
 
-    - name: Copy config file
+    - name: Prepare config file
       run: |
         # Create cache directory and copy config
         mkdir -p .build/cache
         cp -f app_default.config .build/cache/using.config
         cp -f .build/cache/using.config TuyaOpen/
+        echo "Config file ready"
 
     - name: Build Firmware
       run: |
