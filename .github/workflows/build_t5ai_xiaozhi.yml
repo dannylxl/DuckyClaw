@@ -21,18 +21,17 @@ jobs:
 
     - uses: actions/checkout@v4
       with:
-        submodules: recursive
         fetch-depth: 0
 
     - name: Init submodules properly
       run: |
-        # Ensure all submodules are initialized recursively
+        # Ensure all submodules are initialized recursively (full clone)
         git submodule sync --recursive
-        git submodule update --init --recursive --depth 1
+        git submodule update --init --recursive
         # Check and initialize TuyaOpen's internal submodules
         cd TuyaOpen
         git submodule sync --recursive
-        git submodule update --init --recursive --depth 1
+        git submodule update --init --recursive
         # Verify T5AI platform exists
         if [ ! -f "platform/T5AI/t5_os/build.sh" ]; then
           echo "ERROR: T5AI platform build.sh not found!"
