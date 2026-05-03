@@ -26,14 +26,21 @@ jobs:
 
     - name: Init submodules properly
       run: |
+        # Ensure all submodules are initialized recursively
+        git submodule sync --recursive
+        git submodule update --init --recursive --depth 1
+        # Check and initialize TuyaOpen's internal submodules
+        cd TuyaOpen
+        git submodule sync --recursive
         git submodule update --init --recursive --depth 1
         # Verify T5AI platform exists
-        if [ ! -f "TuyaOpen/platform/T5AI/t5_os/build.sh" ]; then
-          echo "T5AI platform not found, initializing TuyaOpen submodules..."
-          cd TuyaOpen
-          git submodule update --init --recursive --depth 1
+        if [ ! -f "platform/T5AI/t5_os/build.sh" ]; then
+          echo "ERROR: T5AI platform build.sh not found!"
+          ls -la platform/ 2>/dev/null || echo "No platform dir"
+          exit 1
         fi
-        ls -la TuyaOpen/platform/T5AI/t5_os/ | head -20
+        echo "T5AI platform verified:"
+        ls -la platform/T5AI/t5_os/ | head -20
 
     - name: Setup Python
       uses: actions/setup-python@v5
