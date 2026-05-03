@@ -5,10 +5,22 @@ ENV TZ=Asia/Shanghai
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget git build-essential python3 python3-pip python3-venv \
-    cmake ninja-build ca-certificates \
+    cmake ninja-build ca-certificates libffi-dev libssl-dev \
+    pkg-config curl unzip \
     && rm -rf /var/lib/apt/lists/*
 
-RUN python3 -m pip install pyyaml kconfiglib
+# Install all required Python packages
+RUN python3 -m pip install --no-cache-dir \
+    pyyaml kconfiglib future click click-option-group \
+    pycryptodome cffi pycparser setuptools six cryptography
+
+# Install ARM toolchain
+RUN mkdir -p /opt/toolchain && cd /opt/toolchain && \
+    wget -q https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2 && \
+    tar -xjf gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2 && \
+    rm gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2
+
+ENV PATH=/opt/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin:$PATH
 
 WORKDIR /workspace
 

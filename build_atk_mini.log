@@ -1,0 +1,94 @@
+ARMINO_SOC is set to bk7258
+ARMINO_TARGET is set to build
+armino project path=/mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/app
+armino ap path=/mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap
+armino cp path=/mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp
+armino build path=/mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/app
+[bk_build_auto_partition.py|INFO] Enter Armino Auto Partition
+[bk_auto_partition|INFO] read parititon table from /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/app/partitions/bk7258/auto_partitions.csv
+[bk_auto_partition|INFO] save partition csv to /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/app/partitions/partitions.csv
+[bk_auto_partition|INFO] save partition json to /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/app/partitions/partitions.json
+[bk_flash_partiton|INFO] read parititons from /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/app/partitions/partitions.json
+[bk_flash_partiton|INFO] gen partition layout header to /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/app/partitions/partitions_gen.h
+[bk_flash_partiton|INFO] gen package json: /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/app/partitions/bk_package.json
+[bk_ota_partition|INFO] read parititons from /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/app/partitions/partitions.json
+[bk_ota_partition|INFO] gen package json: /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/app/partitions/bk_ota_partitions.json
+===================== Partitions Table =====================
+Name                              Offset            Size    
+------------------------------------------------------------
+primary_bootloader              0x00000000          68K     
+primary_cp_app                  0x00011000         1360K    
+primary_ap_app                  0x00165000         1156K    
+ota                             0x00286000         1428K    
+usr_config                      0x003eb000          60K     
+(unused)                        0x003fa000         4096K    
+easyflash                       0x007fa000           8K     
+easyflash_ap                    0x007fc000           8K     
+sys_rf                          0x007fe000           4K     
+sys_net                         0x007ff000           4K     
+============================================================
+[bk_build_ram_regions.py|INFO] Enter Armino Ram Regions Parititons
+[bk_ram_region|INFO] generate ram region header file: /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/app/partitions/ram_regions.h
+make[1]: Entering directory '/mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap'
+build bk7258_ap
+Changing ARMINO_PATH environment variable to: /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os
+-- Found Git: /usr/bin/git (found version "2.43.0") 
+-- [32mARMINO_TOOLS_PATH is /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools[m
+-- [32mLIB_HASH IS "e4f7339447f4c89e725dc308e334ced5"[m
+-- [32mglobal toolchain file: /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/bk7258_ap/toolchain-bk7258_ap.cmake[m
+-- The C compiler identification is unknown
+-- The CXX compiler identification is unknown
+-- The ASM compiler identification is unknown
+-- Found assembler: /opt/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc
+CMake Error at /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/project.cmake:352 (__project):
+  The CMAKE_C_COMPILER:
+
+    /opt/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc
+
+  is not a full path to an existing compiler tool.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CC" or the CMake cache entry CMAKE_C_COMPILER to the full path to
+  the compiler, or to the compiler name if it is in the PATH.
+Call Stack (most recent call first):
+  CMakeLists.txt:8 (project)
+
+
+CMake Error at /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/project.cmake:352 (__project):
+  The CMAKE_CXX_COMPILER:
+
+    /opt/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
+
+  is not a full path to an existing compiler tool.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CXX" or the CMake cache entry CMAKE_CXX_COMPILER to the full path
+  to the compiler, or to the compiler name if it is in the PATH.
+Call Stack (most recent call first):
+  CMakeLists.txt:8 (project)
+
+
+CMake Error at /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/project.cmake:352 (__project):
+  The CMAKE_ASM_COMPILER:
+
+    /opt/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc
+
+  is not a full path to an existing compiler tool.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "ASM" or the CMake cache entry CMAKE_ASM_COMPILER to the full path
+  to the compiler, or to the compiler name if it is in the PATH.
+Call Stack (most recent call first):
+  CMakeLists.txt:8 (project)
+
+
+-- Warning: Did not find file Compiler/-ASM
+-- Configuring incomplete, errors occurred!
+cmake failed with exit code 1
+Executing action: set-target
+Build directory '/mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/app/bk7258_ap' not found. Nothing to clean.
+Running cmake in directory /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/app/bk7258_ap
+Executing "cmake -G 'Unix Makefiles' -DPYTHON_DEPS_CHECKED=1 -DBEKEN_PLATFORM=1 -DARMINO_SOC=bk7258_ap -DCCACHE_ENABLE=0 /mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/app"...
+make[1]: *** [/mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/build_files/build_main.mk:128: bk7258_ap] Error 2
+make[1]: Leaving directory '/mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap'
+make: *** [tools/build_main.mk:112: bk7258_ap] Error 2

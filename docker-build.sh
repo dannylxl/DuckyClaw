@@ -39,9 +39,10 @@ cd "$PROJECT_ROOT"
 # 更新配置
 echo -e "${GREEN}[2/6]${NC} 更新构建配置..."
 mkdir -p .build/cache
-cp -f app_default.config .build/cache/using.config
+# 使用 ATK T5AI Mini Board + 2.4寸屏配置
+cp -f config/ATK_T5AI_MINI_BOARD_2.4LCD_CAMERA.config .build/cache/using.config
 cp -f .build/cache/using.config TuyaOpen/
-echo "    配置已更新：启用显示 + Xiaozhi UI"
+echo "    配置已更新：ATK T5AI Mini Board + 2.4寸屏 + Xiaozhi UI"
 echo ""
 
 # 检查或构建镜像
