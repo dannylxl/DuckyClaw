@@ -42,6 +42,10 @@ jobs:
           mkdir -p platform
           git clone --depth 1 https://github.com/tuya/TuyaOpen-T5AI.git platform/T5AI
         fi
+        # Clone or link tools
+        if [ ! -d "platform/tools" ]; then
+          mkdir -p platform/tools
+        fi
         # Verify T5AI platform
         ls -la platform/
         if [ ! -f "platform/T5AI/t5_os/build.sh" ]; then
@@ -49,6 +53,9 @@ jobs:
           exit 1
         fi
         echo "T5AI platform ready!"
+        echo ""
+        echo "Directory structure:"
+        find platform -maxdepth 3 -type d | head -20
 
     - name: Setup Python
       uses: actions/setup-python@v5
@@ -80,9 +87,10 @@ jobs:
       run: |
         # Create cache directory and copy config
         mkdir -p .build/cache
-        cp -f app_default.config .build/cache/using.config
+        cp -f config/ATK_T5AI_MINI_BOARD_2.4LCD_CAMERA.config .build/cache/using.config
         cp -f .build/cache/using.config TuyaOpen/
-        echo "Config file ready"
+        echo "Config file ready: ATK T5AI Mini Board with 2.4\" SPI LCD"
+        cat .build/cache/using.config | grep -E "CONFIG_BOARD|CONFIG_ATK|CONFIG_ENABLE_AI" | head -10
 
     - name: Build Firmware
       run: |
@@ -101,8 +109,13 @@ jobs:
         bash build.sh DuckyClaw 1.0.0 bk7258 "$TUYA_PROJECT_DIR" build 2>&1 | tee build.log
 
     - name: Package Firmware
+      if: always()
       run: |
         cd TuyaOpen/platform/T5AI/t5_os
+        echo "Checking build outputs..."
+        find build -name "*.bin" -o -name "*.elf" 2>/dev/null | head -20 || echo "No binaries found"
+        ls -la build/bk7258/tuya_app/ 2>/dev/null || echo "Build directory not found"
+
         if [ -f "build/bk7258/tuya_app/package/ua_file.bin" ]; then
           cp build/bk7258/tuya_app/package/ua_file.bin "$GITHUB_WORKSPACE/DuckyClaw_Xiaozhi_UA.bin"
           cp build/bk7258/tuya_app/package/all-app.bin "$GITHUB_WORKSPACE/DuckyClaw_Xiaozhi_QIO.bin"
@@ -110,7 +123,12 @@ jobs:
           ls -lh "$GITHUB_WORKSPACE/"*.bin
         else
           echo "Build artifacts not found"
-          cat build.log | tail -100
+          if [ -f build.log ]; then
+            echo "=== Build Log (last 200 lines) ==="
+            cat build.log | tail -200
+          fi
+          echo "=== Build Directory Structure ==="
+          find build -type f -name "*.log" -o -name "*.cmake" 2>/dev/null | head -20
           exit 1
         fi
 
