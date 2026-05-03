@@ -24,17 +24,16 @@ jobs:
         submodules: recursive
         fetch-depth: 0
 
-    - name: Cache TuyaOpen
-      uses: actions/cache@v4
-      with:
-        path: TuyaOpen
-        key: tuyaopen-${{ hashFiles('.gitmodules') }}
-        restore-keys: |
-          tuyaopen-
-
-    - name: Init TuyaOpen submodules
+    - name: Init submodules properly
       run: |
-        git submodule update --init --recursive
+        git submodule update --init --recursive --depth 1
+        # Verify T5AI platform exists
+        if [ ! -f "TuyaOpen/platform/T5AI/t5_os/build.sh" ]; then
+          echo "T5AI platform not found, initializing TuyaOpen submodules..."
+          cd TuyaOpen
+          git submodule update --init --recursive --depth 1
+        fi
+        ls -la TuyaOpen/platform/T5AI/t5_os/ | head -20
 
     - name: Setup Python
       uses: actions/setup-python@v5
@@ -44,7 +43,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y git wget build-essential
+        sudo apt-get install -y git wget build-essential python3-venv
         pip install -r TuyaOpen/requirements.txt
 
     - name: Setup T5AI Platform
@@ -91,6 +90,7 @@ jobs:
           ls -lh "$GITHUB_WORKSPACE/"*.bin
         else
           echo "Build artifacts not found"
+          cat build.log | tail -100
           exit 1
         fi
 
