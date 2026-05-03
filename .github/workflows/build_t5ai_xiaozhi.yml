@@ -107,14 +107,30 @@ jobs:
 
         echo "Starting build..."
         bash build.sh DuckyClaw 1.0.0 bk7258 "$TUYA_PROJECT_DIR" build 2>&1 | tee build.log
+        BUILD_EXIT_CODE=${PIPESTATUS[0]}
+        echo "Build exit code: $BUILD_EXIT_CODE"
+        if [ $BUILD_EXIT_CODE -ne 0 ]; then
+          echo "Build failed with exit code $BUILD_EXIT_CODE"
+          exit 1
+        fi
+        echo "Build completed successfully"
 
     - name: Package Firmware
       if: always()
       run: |
         cd TuyaOpen/platform/T5AI/t5_os
         echo "Checking build outputs..."
-        find build -name "*.bin" -o -name "*.elf" 2>/dev/null | head -20 || echo "No binaries found"
-        ls -la build/bk7258/tuya_app/ 2>/dev/null || echo "Build directory not found"
+        echo "=== Looking for .bin files ==="
+        find build -name "*.bin" 2>/dev/null | head -20 || echo "No .bin files found"
+        echo ""
+        echo "=== Build directory structure ==="
+        ls -la build/ 2>/dev/null || echo "No build directory"
+        echo ""
+        echo "=== tuya_app directory ==="
+        ls -la build/bk7258/tuya_app/ 2>/dev/null || echo "No tuya_app directory"
+        echo ""
+        echo "=== package directory ==="
+        ls -la build/bk7258/tuya_app/package/ 2>/dev/null || echo "No package directory"
 
         if [ -f "build/bk7258/tuya_app/package/ua_file.bin" ]; then
           cp build/bk7258/tuya_app/package/ua_file.bin "$GITHUB_WORKSPACE/DuckyClaw_Xiaozhi_UA.bin"
@@ -128,7 +144,7 @@ jobs:
             cat build.log | tail -200
           fi
           echo "=== Build Directory Structure ==="
-          find build -type f -name "*.log" -o -name "*.cmake" 2>/dev/null | head -20
+          find build -type f \( -name "*.log" -o -name "*.cmake" \) 2>/dev/null | head -20
           exit 1
         fi
 
