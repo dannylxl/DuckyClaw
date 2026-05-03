@@ -1,0 +1,24 @@
+APP_BIN_NAME=DuckyClaw
+APP_VERSION=1.0.0
+TARGET_PLATFORM=bk7258
+APP_PATH=../../..//e/TuyaOpen/DuckyClaw
+USER_CMD=build
+/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os
+not is ci build
+APP_DIR:apps
+bootloader check ok
+Python version: 3.10
+Not in apt environment (MSYS/MINGW), skipping apt check and continuing...
+Virtual environment already exists.
+Activate script not found.
+build.sh: line 178: /e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/tuya_build_env/bin/activate: No such file or directory
+Failed to activate virtual environment.
+build.sh: line 179: /e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/tuya_build_env/bin/pip3: No such file or directory
+Failed to install required Python packages.
+build.sh: line 179: deactivate: command not found
+Failed to enable python virtual environment.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! TODO app_resource_config.json
+Start Compile
+make bk7258 PROJECT=tuya_app BUILD_DIR=../build APP_NAME=DuckyClaw APP_VERSION=1.0.0 -j
+build.sh: line 241: make: command not found
+make failed, 127

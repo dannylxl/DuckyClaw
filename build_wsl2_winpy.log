@@ -1,0 +1,5 @@
+==============================================
+  DuckyClaw WSL2 构建脚本 (使用 Windows Python)
+==============================================
+
+./build-wsl2-winpy.sh: line 21: cd: /mnt/e/TuyaOpen/DuckyClaw: No such file or directory
