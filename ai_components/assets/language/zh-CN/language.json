@@ -36,6 +36,14 @@
         "SYSTEM_MSG_WIFI_DISCONNECTED":"WiFi 断开连接",
         "SYSTEM_MSG_VOLUME":"音量设置为",
 
-        "VIEW_IMAGE":"查看图片"
+        "VIEW_IMAGE":"查看图片",
+
+        "LANG_STANDBY_HINT_HAPPY": "轻触唤醒",
+        "LANG_STANDBY_HINT_RELAXED": "随时等你",
+        "LANG_STANDBY_HINT_CURIOUS": "有什么想说的？",
+        "LANG_STANDBY_HINT_SLEEPY": "晚安...",
+        "LANG_STANDBY_HINT_EXCITED": "来啦！",
+        "LANG_RESPONDING": "回应中...",
+        "LANG_SLEEPING": "休眠中..."
     }
 }

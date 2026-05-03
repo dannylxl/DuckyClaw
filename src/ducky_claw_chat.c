@@ -11,6 +11,7 @@
 #include "ai_chat_main.h"
 #include "ducky_claw_chat.h"
 #include "agent_loop.h"
+#include "camera_monitor.h"
 
 #include "app_im.h"
 #include "tal_log.h"
@@ -40,6 +41,10 @@ static TIMER_ID sg_printf_heap_tm;
 #if defined(ENABLE_COMP_AI_DISPLAY) && (ENABLE_COMP_AI_DISPLAY == 1)
 static AI_UI_WIFI_STATUS_E sg_wifi_status = AI_UI_WIFI_STATUS_DISCONNECTED;
 static TIMER_ID            sg_disp_status_tm;
+#endif
+
+#if defined(ENABLE_COMP_AI_VIDEO) && (ENABLE_COMP_AI_VIDEO == 1)
+static bool sg_camera_monitor_started = false;
 #endif
 /***********************************************************
 ***********************function define**********************
@@ -88,6 +93,15 @@ static void __display_net_status_update(void)
     if (wifi_status != sg_wifi_status) {
         sg_wifi_status = wifi_status;
         ai_ui_disp_msg(AI_UI_DISP_NETWORK, (uint8_t *)&wifi_status, sizeof(AI_UI_WIFI_STATUS_E));
+
+#if defined(ENABLE_COMP_AI_VIDEO) && (ENABLE_COMP_AI_VIDEO == 1)
+        // Start camera monitor when network is connected
+        if (wifi_status != AI_UI_WIFI_STATUS_DISCONNECTED && !sg_camera_monitor_started) {
+            PR_NOTICE("Network connected, starting camera monitor...");
+            camera_monitor_start();
+            sg_camera_monitor_started = true;
+        }
+#endif
     }
 }
 
@@ -194,6 +208,17 @@ static void __ai_chat_handle_event(AI_NOTIFY_EVENT_T *event)
     case AI_USER_EVT_TEXT_STREAM_DATA: {
         AI_NOTIFY_TEXT_T *text = (AI_NOTIFY_TEXT_T *)event->data;
 
+        // Pass response to camera monitor for human detection analysis
+        if (text && text->data && text->datalen > 0) {
+            char *temp_str = tal_malloc(text->datalen + 1);
+            if (temp_str) {
+                memcpy(temp_str, text->data, text->datalen);
+                temp_str[text->datalen] = '\0';
+                camera_monitor_handle_ai_response(temp_str);
+                tal_free(temp_str);
+            }
+        }
+
         if (data_write_offset + text->datalen >= STREAM_DATA_MAX_LEN) {
             /* Only flush to IM if we are NOT in a tool-loop iteration */
             if (!agent_loop_in_tool_loop()) {
@@ -242,7 +267,11 @@ OPERATE_RET ducky_claw_chat_init(void)
         .disp_flush_cb = __ai_video_display_flush,
     };
 
+    // Initialize video first (camera init is asynchronous)
     TUYA_CALL_ERR_LOG(ai_video_init(&ai_video_cfg));
+
+    // Initialize camera monitor after video (but don't start yet)
+    TUYA_CALL_ERR_LOG(camera_monitor_init());
 #endif
 
 #if defined(ENABLE_COMP_AI_MCP) && (ENABLE_COMP_AI_MCP == 1)

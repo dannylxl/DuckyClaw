@@ -1,0 +1,50 @@
+name: Build T5AI Firmware with Xiaozhi UI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y git wget build-essential cmake ninja-build
+        pip install -r TuyaOpen/requirements.txt
+        
+    - name: Setup T5AI Platform
+      run: |
+        cd TuyaOpen
+        python tos.py build -v || true
+        
+    - name: Build Firmware
+      run: |
+        cd TuyaOpen
+        export TUYA_PROJECT_DIR=$PWD/..
+        export TUYA_APP_NAME=DuckyClaw
+        export TUYA_APP_PATH=$PWD/../
+        platform/T5AI/t5_os/build.sh DuckyClaw 1.0.0 bk7258 $PWD/../ build
+        
+    - name: Upload Firmware
+      uses: actions/upload-artifact@v4
+      with:
+        name: DuckyClaw_Xiaozhi_Firmware
+        path: |
+          output/*.bin
+          TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/package/*.bin
+        retention-days: 30

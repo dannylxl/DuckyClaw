@@ -23,6 +23,7 @@ aux_source_directory(${APP_PATH}/agent APP_SRCS)
 set(APP_INC
     ${APP_PATH}
     ${APP_PATH}/include
+    ${APP_PATH}/src
     ${APP_PATH}/tools
     ${APP_PATH}/cron_service
     ${APP_PATH}/heartbeat
