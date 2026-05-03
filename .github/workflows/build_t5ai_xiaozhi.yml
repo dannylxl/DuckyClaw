@@ -23,7 +23,7 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Init submodules properly
+    - name: Init submodules and T5AI platform
       run: |
         # Ensure all submodules are initialized recursively (full clone)
         git submodule sync --recursive
@@ -32,6 +32,11 @@ jobs:
         cd TuyaOpen
         git submodule sync --recursive
         git submodule update --init --recursive
+        # Clone T5AI platform (it's not a submodule, but a separate repo)
+        if [ ! -d "platform/T5AI" ]; then
+          echo "Cloning T5AI platform..."
+          git clone --depth 1 https://github.com/tuya/TuyaOpen-T5AI.git platform/T5AI
+        fi
         # Verify T5AI platform exists
         if [ ! -f "platform/T5AI/t5_os/build.sh" ]; then
           echo "ERROR: T5AI platform build.sh not found!"
