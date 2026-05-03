@@ -1,1 +1,15 @@
-C:\Users\Administrator\AppData\Local\CoPaw\python.exe: can't open file 'E:\\TuyaOpen\\DuckyClaw\\tos.py': [Errno 2] No such file or directory
+build.sh: line 2: $'\r': command not found
+build.sh: line 9: $'\r': command not found
+build.sh: line 11: $'\r': command not found
+APP_BIN_NAME=DuckyClaw
+APP_VERSION=1.0.0
+TARGET_PLATFORM=bk7258
+APP_PATH=../../..//mnt/e/TuyaOpen/DuckyClaw
+USER_CMD=build
+build.sh: line 17: $'\r': command not found
+build.sh: line 20: $'\r': command not found
+/mnt/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os
+build.sh: line 23: $'\r': command not found
+build.sh: line 25: $'\r': command not found
+build.sh: line 43: syntax error near unexpected token `$'do\r''
+build.sh: line 43: `    for i in `find ${APP_OBJ_PATH}/$APP_BIN_NAME/src -type d`; do'
