@@ -1,0 +1,198 @@
+APP_BIN_NAME=DuckyClaw
+APP_VERSION=1.0.0
+TARGET_PLATFORM=bk7258
+APP_PATH=../../..//e/TuyaOpen/DuckyClaw
+USER_CMD=build
+/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os
+not is ci build
+APP_DIR:apps
+bootloader check ok
+Python version: 3.10
+Not in apt environment (MSYS/MINGW), skipping apt check and continuing...
+Virtual environment not found. Creating one...
+Virtual environment created at /e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/tuya_build_env
+Activate script not found.
+build.sh: line 178: /e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/tuya_build_env/bin/activate: No such file or directory
+Failed to activate virtual environment.
+build.sh: line 179: /e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/tuya_build_env/bin/pip3: No such file or directory
+Failed to install required Python packages.
+build.sh: line 179: deactivate: command not found
+Failed to enable python virtual environment.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! TODO app_resource_config.json
+Start Compile
+make bk7258 PROJECT=tuya_app BUILD_DIR=../build APP_NAME=DuckyClaw APP_VERSION=1.0.0 -j
+ARMINO_SOC is set to bk7258
+ARMINO_TARGET is set to build
+armino project path=E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app
+armino ap path=E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap
+armino cp path=E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp
+armino build path=E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app
+[bk_build_ram_regions.py|INFO] Enter Armino Ram Regions Parititons
+[bk_ram_region|INFO] generate ram region header file: E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\ram_regions.h
+[bk_build_auto_partition.py|INFO] Enter Armino Auto Partition
+[bk_auto_partition|INFO] read parititon table from E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\projects\tuya_app\partitions\bk7258\auto_partitions.csv
+[bk_auto_partition|INFO] save partition csv to E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\partitions.csv
+[bk_auto_partition|INFO] save partition json to E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\partitions.json
+[bk_flash_partiton|INFO] read parititons from E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\partitions.json
+[bk_flash_partiton|INFO] gen partition layout header to E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\partitions_gen.h
+[bk_flash_partiton|INFO] gen package json: E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\bk_package.json
+[bk_ota_partition|INFO] read parititons from E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\partitions.json
+[bk_ota_partition|INFO] gen package json: E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\bk_ota_partitions.json
+===================== Partitions Table =====================
+Name                              Offset            Size    
+------------------------------------------------------------
+primary_bootloader              0x00000000          68K     
+primary_cp_app                  0x00011000         1224K    
+primary_ap_app                  0x00143000         3876K    
+ota                             0x0050c000         1780K    
+ota_mgr                         0x006c9000           8K     
+usr_config                      0x006cb000         1024K    
+res                             0x007cb000           8K     
+tuya_data                       0x007cd000          196K    
+sys_rf                          0x007fe000           4K     
+sys_net                         0x007ff000           4K     
+============================================================
+make[1]: Entering directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap'
+make[1]: Entering directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp'
+build bk7258_ap
+build bk7258
+Changing ARMINO_PATH environment variable to: e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os
+Changing ARMINO_PATH environment variable to: e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os
+E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\tools\build_tools\armino:366: DeprecationWarning: 'MultiCommand' is deprecated and will be removed in Click 9.0. Use 'Group' instead.
+  class CLI(click.MultiCommand):
+E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\tools\build_tools\armino:366: DeprecationWarning: 'MultiCommand' is deprecated and will be removed in Click 9.0. Use 'Group' instead.
+  class CLI(click.MultiCommand):
+CMake Deprecation Warning at CMakeLists.txt:3 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+CMake Deprecation Warning at CMakeLists.txt:3 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+
+CMake Deprecation Warning at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/project.cmake:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  CMakeLists.txt:12 (include)
+
+CMake Deprecation Warning at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/project.cmake:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  CMakeLists.txt:12 (include)
+
+
+
+-- Found Git: C:/Program Files/Git/mingw64/bin/git.exe (found version "2.53.0.windows.2")
+-- Found Git: C:/Program Files/Git/mingw64/bin/git.exe (found version "2.53.0.windows.2")
+-- ARMINO_TOOLS_PATH is E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools
+-- ARMINO_TOOLS_PATH is E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools
+-- LIB_HASH IS "9c9c389f19fa7c6ee33018459c75c6f6"
+-- global toolchain file: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/bk7258/toolchain-bk7258.cmake
+-- The C compiler identification is GNU 10.3.1
+-- LIB_HASH IS "e4f7339447f4c89e725dc308e334ced5"
+-- global toolchain file: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/bk7258_ap/toolchain-bk7258_ap.cmake
+-- The C compiler identification is GNU 10.3.1
+-- The CXX compiler identification is GNU 10.3.1
+-- The ASM compiler identification is GNU
+-- The CXX compiler identification is GNU 10.3.1
+-- Found assembler: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe
+-- Detecting C compiler ABI info
+-- The ASM compiler identification is GNU
+-- Found assembler: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building Beken ARMINO components for target T5 CP
+-- Building Beken ARMINO components for target T5 AP
+-- enter check_verify_env_varible
+-- CMake Error at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/CMakeLists.txt:62 (string):
+  string sub-command REPLACE requires at least four arguments.
+Call Stack (most recent call first):
+  E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/scripts/component_get_requirements.cmake:117 (include)
+  E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/scripts/component_get_requirements.cmake:135 (__component_get_requirements)
+
+
+
+CMake Error at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/component.cmake:317 (include):
+  include could not find requested file:
+
+    E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/component_requires.temp.cmake
+Call Stack (most recent call first):
+  E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/build.cmake:542 (__component_get_requirements)
+  E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/project.cmake:426 (armino_build_process)
+  CMakeLists.txt:13 (project)
+
+
+-- Configuring incomplete, errors occurred!
+cmake failed with exit code 1
+Executing action: set-target
+Running cmake in directory e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os\build\bk7258\tuya_app\bk7258
+Executing "cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DBEKEN_PLATFORM=1 -DARMINO_SOC=bk7258 -DCCACHE_ENABLE=0 e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os\projects\tuya_app"...
+-- enter check_verify_env_varible
+make[1]: *** [E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/build_files/build_main.mk:128: bk7258] Error 2
+make[1]: Leaving directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp'
+make: *** [tools/build_main.mk:115: bk7258_cp] Error 2
+make: *** Waiting for unfinished jobs....
+-- CMake Error at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/CMakeLists.txt:62 (string):
+  string sub-command REPLACE requires at least four arguments.
+Call Stack (most recent call first):
+  E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/scripts/component_get_requirements.cmake:117 (include)
+  E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/scripts/component_get_requirements.cmake:135 (__component_get_requirements)
+
+
+
+CMake Error at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/component.cmake:317 (include):
+  include could not find requested file:
+
+    E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/component_requires.temp.cmake
+Call Stack (most recent call first):
+  E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/build.cmake:542 (__component_get_requirements)
+  E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/project.cmake:426 (armino_build_process)
+  CMakeLists.txt:13 (project)
+
+
+-- Configuring incomplete, errors occurred!
+cmake failed with exit code 1
+Executing action: set-target
+Running cmake in directory e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os\build\bk7258\tuya_app\bk7258_ap
+Executing "cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DBEKEN_PLATFORM=1 -DARMINO_SOC=bk7258_ap -DCCACHE_ENABLE=0 e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os\projects\tuya_app"...
+make[1]: *** [E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/build_files/build_main.mk:128: bk7258_ap] Error 2
+make[1]: Leaving directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap'
+make: *** [tools/build_main.mk:112: bk7258_ap] Error 2
+make failed, 2

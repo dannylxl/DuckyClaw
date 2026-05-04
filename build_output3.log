@@ -1,0 +1,1321 @@
+APP_BIN_NAME=DuckyClaw
+APP_VERSION=1.0.0
+TARGET_PLATFORM=bk7258
+APP_PATH=../../..//e/TuyaOpen/DuckyClaw
+USER_CMD=build
+/e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os
+not is ci build
+APP_DIR:apps
+bootloader check ok
+Python version: 3.10
+Not in apt environment (MSYS/MINGW), skipping apt check and continuing...
+Virtual environment already exists.
+Activate script not found.
+build.sh: line 178: /e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/tuya_build_env/bin/activate: No such file or directory
+Failed to activate virtual environment.
+build.sh: line 179: /e/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/tuya_build_env/bin/pip3: No such file or directory
+Failed to install required Python packages.
+build.sh: line 179: deactivate: command not found
+Failed to enable python virtual environment.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! TODO app_resource_config.json
+Start Compile
+make bk7258 PROJECT=tuya_app BUILD_DIR=../build APP_NAME=DuckyClaw APP_VERSION=1.0.0 -j
+ARMINO_SOC is set to bk7258
+ARMINO_TARGET is set to build
+armino project path=E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app
+armino ap path=E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap
+armino cp path=E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp
+armino build path=E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app
+[bk_build_auto_partition.py|INFO] Enter Armino Auto Partition
+[bk_auto_partition|INFO] read parititon table from E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\projects\tuya_app\partitions\bk7258\auto_partitions.csv
+[bk_auto_partition|INFO] save partition csv to E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\partitions.csv
+[bk_auto_partition|INFO] save partition json to E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\partitions.json
+[bk_flash_partiton|INFO] read parititons from E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\partitions.json
+[bk_flash_partiton|INFO] gen partition layout header to E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\partitions_gen.h
+[bk_flash_partiton|INFO] gen package json: E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\bk_package.json
+[bk_ota_partition|INFO] read parititons from E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\partitions.json
+[bk_ota_partition|INFO] gen package json: E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\bk_ota_partitions.json
+[bk_build_ram_regions.py|INFO] Enter Armino Ram Regions Parititons
+[bk_ram_region|INFO] generate ram region header file: E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\build\bk7258\tuya_app\partitions\ram_regions.h
+===================== Partitions Table =====================
+Name                              Offset            Size    
+------------------------------------------------------------
+primary_bootloader              0x00000000          68K     
+primary_cp_app                  0x00011000         1224K    
+primary_ap_app                  0x00143000         3876K    
+ota                             0x0050c000         1780K    
+ota_mgr                         0x006c9000           8K     
+usr_config                      0x006cb000         1024K    
+res                             0x007cb000           8K     
+tuya_data                       0x007cd000          196K    
+sys_rf                          0x007fe000           4K     
+sys_net                         0x007ff000           4K     
+============================================================
+make[1]: Entering directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap'
+make[1]: Entering directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp'
+build bk7258_ap
+build bk7258
+Changing ARMINO_PATH environment variable to: e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os
+E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\tools\build_tools\armino:366: DeprecationWarning: 'MultiCommand' is deprecated and will be removed in Click 9.0. Use 'Group' instead.
+  class CLI(click.MultiCommand):
+Changing ARMINO_PATH environment variable to: e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os
+E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\tools\build_tools\armino:366: DeprecationWarning: 'MultiCommand' is deprecated and will be removed in Click 9.0. Use 'Group' instead.
+  class CLI(click.MultiCommand):
+CMake Deprecation Warning at CMakeLists.txt:3 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/project.cmake:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  CMakeLists.txt:12 (include)
+
+
+-- Found Git: C:/Program Files/Git/mingw64/bin/git.exe (found version "2.53.0.windows.2")
+-- ARMINO_TOOLS_PATH is E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools
+CMake Deprecation Warning at CMakeLists.txt:3 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/cmake/project.cmake:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  CMakeLists.txt:12 (include)
+
+
+-- Found Git: C:/Program Files/Git/mingw64/bin/git.exe (found version "2.53.0.windows.2")
+-- ARMINO_TOOLS_PATH is E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools
+-- LIB_HASH IS "9c9c389f19fa7c6ee33018459c75c6f6"
+-- global toolchain file: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/bk7258/toolchain-bk7258.cmake
+-- The C compiler identification is GNU 10.3.1
+-- LIB_HASH IS "e4f7339447f4c89e725dc308e334ced5"
+-- global toolchain file: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/bk7258_ap/toolchain-bk7258_ap.cmake
+-- The CXX compiler identification is GNU 10.3.1
+-- The C compiler identification is GNU 10.3.1
+-- The ASM compiler identification is GNU
+-- Found assembler: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe
+-- Detecting C compiler ABI info
+-- The CXX compiler identification is GNU 10.3.1
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- The ASM compiler identification is GNU
+-- Found assembler: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe
+-- Detecting C compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building Beken ARMINO components for target T5 CP
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- enter check_verify_env_varible
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/tools/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building Beken ARMINO components for target T5 AP
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/components_kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/middleware_kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/projects_kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/properties_kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/extra_kconfigs.in
+-- enter check_verify_env_varible
+warning: DMA_LOGIC_CHAN_CNT (defined at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/general_dma/Kconfig:6) defined with multiple prompts in single location
+warning: DMA_LOGIC_CHAN_ID_MIN (defined at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/general_dma/Kconfig:12) defined with multiple prompts in single location
+warning: DIGLDO_LOW_VOLTAGE_ENABLE (defined at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/pwr_clk/Kconfig:65) has leading or trailing whitespace in its prompt
+warning: The int symbol UART_ATE_PORT (defined at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/uart/Kconfig:31) is being evaluated in a logical context somewhere. It will always evaluate to n.
+Loading defaults file E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/bk7258/bk7258.defconfig...
+Loading defaults file E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/cp/config/bk7258/config...
+-- enter check_verify_env_varible
+CMake Deprecation Warning at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/build_files/build_main.cmake:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/CMakeLists.txt:1 (include)
+
+
+WARINIG bt_host_exist 0
+WARINIG bt_host_basename .a
+WARINIG bt_controller_basename libbluetooth_controller_controller_only_ble.a
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/jpeg_enc' is not a directory.
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_pm/include' is not a directory.
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/controller_if/include' is not a directory.
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/wpa_supplicant-2.10/include/bk_private' is not a directory.
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/components_kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/middleware_kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/projects_kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/properties_kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/kconfigs.in
+E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/extra_kconfigs.in
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_net/include' is not a directory.
+-- bk_libs and toolchain version verify success...
+warning: ADK_AUTO_TEST_PIPELINE (defined at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_audio/audio_pipeline/Kconfig:34) has leading or trailing whitespace in its prompt
+warning: ADK_AUTO_TEST_ELEMENT (defined at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_audio/audio_pipeline/Kconfig:39) has leading or trailing whitespace in its prompt
+warning: ADK_AUTO_TEST_EVENT (defined at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_audio/audio_pipeline/Kconfig:44) has leading or trailing whitespace in its prompt
+-- enter check_verify_env_varible
+warning: DMA_LOGIC_CHAN_CNT (defined at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/general_dma/Kconfig:6) defined with multiple prompts in single location
+warning: DMA_LOGIC_CHAN_ID_MIN (defined at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/general_dma/Kconfig:12) defined with multiple prompts in single location
+warning: DIGLDO_LOW_VOLTAGE_ENABLE (defined at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/pwr_clk/Kconfig:65) has leading or trailing whitespace in its prompt
+warning: default on the choice symbol LFS_THREADSAFE (defined at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/littlefs/Kconfig:21) will have no effect, as defaults do not affect choice symbols
+-- [Select ld file]: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/bk7258/bk7258_bsp.ld.
+-- Adding linker script E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/bk7258/armino/bk7258/bk7258_out.ld
+Loading defaults file E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/bk7258_ap/bk7258_ap.defconfig...
+Loading defaults file E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/ap/config/bk7258_ap/config...
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/at_server/atsvr_cmd' is not a directory.
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/adapter/utilities/include' is not a directory.
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/include/base/include' is not a directory.
+Check defconfig: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/bk7258/bk7258.defconfig
+-- Components: adc_key app at at_server base64 bk7258 bk_adapter bk_ate bk_bluetooth bk_cli bk_common bk_event bk_httpc bk_init bk_libs bk_log bk_netif bk_phy bk_pm bk_ps bk_rtos bk_startup bk_system bk_uid bk_wifi bt cm33 cmsis common compal console controller_if coredump cp driver easy_flash embeded_gcov hmac_sha_256 include iperf json key_handle lwip_intf_v2_1 mesh os os_source part_table partitions psa_mbedtls release saradc_intf temp_detect touch tuyaos_adapter uart_debug unity utf8 vnd_cal webclient wpa_supplicant-2.10
+-- Configuring done (3.4s)
+-- enter check_verify_env_varible
+CMake Deprecation Warning at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/build_files/build_main.cmake:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/CMakeLists.txt:1 (include)
+
+
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/demo/beken/usb_host' is not a directory.
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_dvp/include' is not a directory.
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_uvc/include' is not a directory.
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_wifi_driver/include' is not a directory.
+WARINIG bt_host_exist 1
+WARINIG bt_host_basename libbluetooth_host_ble_ap.a
+-- Generating done (0.6s)
+-- Build files have been written to: E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258
+-- bk_libs and toolchain version verify success...
+CMake Warning (dev) at E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_libs/CMakeLists.txt:67 (message):
+  NOT use bk helix, this lib offered by tuya
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- enter check_verify_env_varible
+Executing action: set-target
+Build directory 'e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os\build\bk7258\tuya_app\bk7258' not found. Nothing to clean.
+Running cmake in directory e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os\build\bk7258\tuya_app\bk7258
+Executing "cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DBEKEN_PLATFORM=1 -DARMINO_SOC=bk7258 -DCCACHE_ENABLE=0 e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os\projects\tuya_app"...
+Done
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/main' is not a directory.
+-- [Select ld file]: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/bk7258_ap/bk7258_ap_bsp.ld.
+-- Adding linker script E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/bk7258_ap/armino/bk7258_ap/bk7258_ap_out.ld
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_asr_service/include' is not a directory.
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_audio/audio_pipeline/include' is not a directory.
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_audio/audio_utils/include' is not a directory.
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_pm/include' is not a directory.
+-- Include directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/include/base/include' is not a directory.
+Check defconfig: E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/bk7258_ap/bk7258_ap.defconfig
+-- Components: aac_encoder acc_decoder adc_key aec_algorithm aec_v3_algorithm agc_algorithm ap app array_stream at_server audio_pipeline audio_play audio_record audio_utils avdk_utils base64 bk7258_ap bk_adapter bk_asr_service bk_aud_param_ctrl bk_bluetooth bk_cli bk_common bk_draw_blend bk_dvp bk_event bk_httpc bk_https bk_init bk_libs bk_log bk_modem bk_netif bk_peripheral bk_player_service bk_pm bk_ps bk_rtos bk_startup bk_system bk_uid bk_usb bk_uvc bk_vfs bk_voice_service bk_websocket bk_wifi bk_wifi_driver bt cm33 cmsis common compal compress console coredump cs2p2p display_service driver easy_flash embeded_gcov eq_algorithm fatfs flashdb frame_array_stream g711_decoder g711_encoder g722_decoder g722_encoder hmac_sha_256 http image_convert include iperf json key key_handle littlefs lvgl lwip_intf_v2_1 media_service media_utils mp3_decoder multimedia onboard_dual_dmic_mic_stream onboard_mic_stream onboard_speaker_stream opus_dec opus_enc os os_source ota part_table partitions psa_mbedtls raw_stream release rsp_algorithm touch tuyaos_adapter uac_mic_stream uac_speaker_stream uart_debug uart_stream unity utf8 vfs_stream wanson wav_decoder webclient wifi_transfer
+-- Configuring done (4.8s)
+Changing ARMINO_PATH environment variable to: e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os
+E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\tools\build_tools\armino:366: DeprecationWarning: 'MultiCommand' is deprecated and will be removed in Click 9.0. Use 'Group' instead.
+  class CLI(click.MultiCommand):
+[1/601] armino ====> gen file E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/project_elf_src.c...
+[2/601] Generating _build/security.h
+DEBUG:root:parse csv_file=ppc.csv
+DEBUG:root:ppc.csv support prefered csv fields
+DEBUG:root:parse csv_file=gpio_dev.csv
+DEBUG:root:gpio_dev.csv support prefered csv fields
+DEBUG:root:Create _ppc.h
+DEBUG:root:Create tfm_hal_ppc.h
+DEBUG:root:parse csv_file=mpc.csv
+DEBUG:root:mpc.csv support prefered csv fields
+DEBUG:root:Create _mpc.h
+DEBUG:root:parse csv_file=security.csv
+DEBUG:root:Create security.h
+DEBUG:root:parse csv_file=ota.csv
+DEBUG:root:Field app_security_counter of ota.csv not supported
+DEBUG:root:Create _ota.h
+DEBUG:root:Create _otp.h
+DEBUG:root:Create _otp.c
+DEBUG:root:parse csv_file=ota.csv
+DEBUG:root:Field app_security_counter of ota.csv not supported
+[3/601] Generating linker script...
+cc1.exe: warning:  is shorter than expected
+[4/601] Building C object armino/bk_common/CMakeFiles/__armino_bk_common.dir/bk_feature.c.obj
+[5/601] Building C object armino/bk_common/CMakeFiles/__armino_bk_common.dir/bk_crc.c.obj
+[6/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/icu_hal.c.obj
+[7/601] Building C object armino/bk_startup/CMakeFiles/__armino_bk_startup.dir/freertos/rtos_init.c.obj
+[8/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/aon_wdt_hal.c.obj
+[9/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/dma_hal.c.obj
+-- Generating done (1.1s)
+-- Build files have been written to: E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap
+[10/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/flash_hal.c.obj
+[11/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/wdt_hal.c.obj
+[12/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/trng_hal.c.obj
+[13/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/efuse_hal.c.obj
+[14/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/spi_hal.c.obj
+[15/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/timer_hal.c.obj
+[16/601] Linking C static library armino\bk_common\libbk_common.a
+Executing action: set-target
+Build directory 'e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os\build\bk7258\tuya_app\bk7258_ap' not found. Nothing to clean.
+Running cmake in directory e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os\build\bk7258\tuya_app\bk7258_ap
+Executing "cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DBEKEN_PLATFORM=1 -DARMINO_SOC=bk7258_ap -DCCACHE_ENABLE=0 e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os\projects\tuya_app"...
+Done
+[17/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/uart_hal.c.obj
+[18/601] Building C object armino/bk_event/CMakeFiles/__armino_bk_event.dir/event.c.obj
+[19/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/timer_ll.c.obj
+[20/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/mbox0_hal.c.obj
+[21/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/adc_hal.c.obj
+[22/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/psram_ll.c.obj
+[23/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/aon_rtc_hal_64bit.c.obj
+[24/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/mpu_cfg.c.obj
+[25/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/ckmn_hal.c.obj
+[26/601] Building C object armino/bk_startup/CMakeFiles/__armino_bk_startup.dir/system_main.c.obj
+[27/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/gpio_ll.c.obj
+[28/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/otp_hal.c.obj
+[29/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/timer_hal_debug.c.obj
+[30/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/psram_hal.c.obj
+[31/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/gpio_hal.c.obj
+[32/601] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/sdmadc_hal.c.obj
+[33/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/dma_ll.c.obj
+[34/601] Linking C static library armino\bk_event\libbk_event.a
+[35/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/timer_hal.c.obj
+[36/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/uart_ll.c.obj
+[37/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/dma_hal_debug.c.obj
+[38/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/wdt_ll.c.obj
+[39/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/trng_ll.c.obj
+[40/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/efuse_ll.c.obj
+[41/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/icu_ll.c.obj
+[42/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/icu_hal_debug.c.obj
+[43/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/spi_ll.c.obj
+[44/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/trng_hal_debug.c.obj
+[45/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/gpio_hal_debug.c.obj
+[46/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/efuse_hal_debug.c.obj
+[47/601] Linking C static library armino\bk_startup\libbk_startup.a
+[48/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/spi_hal_debug.c.obj
+[49/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/wdt_hal_debug.c.obj
+[50/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/adc_ll.c.obj
+[51/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/calendar_ll.c.obj
+[52/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/flash_ll.c.obj
+[53/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/uart_hal_debug.c.obj
+[54/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/adc_hal_debug.c.obj
+[55/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/flash_hal_debug.c.obj
+[56/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/calendar_hal_debug.c.obj
+[57/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/sys_pm_hal_ctrl.c.obj
+[58/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/aon_rtc_hal_debug.c.obj
+[59/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/sys_pm_hal_debug.c.obj
+[60/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/sdio_hal_debug.c.obj
+[61/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/lin_ll.c.obj
+[62/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/aon_pmu_hal_debug.c.obj
+[63/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/sys_hal_debug.c.obj
+[64/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/ckmn_ll.c.obj
+[65/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/aon_pmu_hal.c.obj
+[66/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/qspi_hal_debug.c.obj
+[67/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/ckmn_hal_debug.c.obj
+[68/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/sys_clock_hal_debug.c.obj
+[69/601] Linking C static library armino\common\libcommon.a
+[70/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/lin_hal_debug.c.obj
+[71/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/i2s_hal.c.obj
+[72/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_ble.c.obj
+[73/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/sdmadc_hal_debug.c.obj
+[74/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/sys_pm_hal.c.obj
+[75/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_event.c.obj
+[76/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_mico.c.obj
+[77/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_common.c.obj
+[78/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_timer.c.obj
+[79/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_temp_detect.c.obj
+[80/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_rpc.c.obj
+[81/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_os.c.obj
+[82/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_adc.c.obj
+[83/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_gpio.c.obj
+[84/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_uart.c.obj
+[85/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_mem.c.obj
+[86/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_exception.c.obj
+[87/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_fpb.c.obj
+[88/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_main.c.obj
+[89/601] Building C object armino/bk7258/CMakeFiles/__armino_bk7258.dir/hal/sys_hal.c.obj
+[90/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_misc.c.obj
+[91/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_dwt.c.obj
+[92/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_reg.c.obj
+[93/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_wdt.c.obj
+[94/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_phy.c.obj
+[95/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_iperf.c.obj
+Changing ARMINO_PATH environment variable to: e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os
+[96/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_trng.c.obj
+[97/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_efuse.c.obj
+[98/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/rpc_client_gpio.c.obj
+[99/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_flash.c.obj
+[100/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_netif.c.obj
+[101/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_pwr.c.obj
+[102/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_dma.c.obj
+[103/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_touch.c.obj
+E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\T5AI\t5_os\tools\build_tools\armino:366: DeprecationWarning: 'MultiCommand' is deprecated and will be removed in Click 9.0. Use 'Group' instead.
+  class CLI(click.MultiCommand):
+[104/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_aon_rtc.c.obj
+[105/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_lwip.c.obj
+[106/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/shell_mailbox_ipc.c.obj
+[107/601] Linking C static library armino\bk7258\libbk7258.a
+[108/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_flash_test.c.obj
+[109/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/shell_uart.c.obj
+[110/601] Building C object armino/vnd_cal/CMakeFiles/__armino_vnd_cal.dir/vnd_cal.c.obj
+[111/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_uid.c.obj
+[112/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_interrupt.c.obj
+[113/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_sdmadc.c.obj
+[114/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_puf.c.obj
+[115/601] Building C object armino/bk_ate/CMakeFiles/__armino_bk_ate.dir/ate.c.obj
+[116/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_psram.c.obj
+[117/601] Building C object armino/bk_init/CMakeFiles/__armino_bk_init.dir/components_init.c.obj
+[118/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_wifi.c.obj
+[119/601] Building C object armino/bk_system/CMakeFiles/__armino_bk_system.dir/reboot.c.obj
+[120/601] Building C object armino/bk_init/CMakeFiles/__armino_bk_init.dir/bk_init.c.obj
+[121/601] Building C object armino/bk_system/CMakeFiles/__armino_bk_system.dir/delay.c.obj
+[122/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_ckmn.c.obj
+[123/601] Building C object armino/bk_system/CMakeFiles/__armino_bk_system.dir/printf.c.obj
+[124/601] Building C object armino/bk_system/CMakeFiles/__armino_bk_system.dir/os/freertos/tick.c.obj
+[125/601] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/shell_task.c.obj
+[126/601] Building C object armino/bk_system/CMakeFiles/__armino_bk_system.dir/printf_base.c.obj
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_system/printf_base.c: In function 'bk_printf_init':
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_system/printf_base.c:72:13: warning: implicit declaration of function 'ate_is_enabled' [-Wimplicit-function-declaration]
+   72 |         if (ate_is_enabled()) {
+      |             ^~~~~~~~~~~~~~
+[127/601] Building C object armino/bk_system/CMakeFiles/__armino_bk_system.dir/bk_system_at.c.obj
+[1/669] Generating linker script...
+cc1.exe: warning:  is shorter than expected
+[128/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/bk_workqueue.c.obj
+[129/601] Building C object armino/bk_system/CMakeFiles/__armino_bk_system.dir/mac.c.obj
+[130/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/phy.c.obj
+[131/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/net_param.c.obj
+[2/669] armino ====> gen file E:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/project_elf_src.c...
+[132/601] Linking C static library armino\bk_cli\libbk_cli.a
+[133/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/pbuf.c.obj
+[134/601] Building C object armino/iperf/CMakeFiles/__armino_iperf.dir/iperf.c.obj
+[135/601] Linking C static library armino\bk_init\libbk_init.a
+[136/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rw_msdu.c.obj
+[137/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/lsig_monitor.c.obj
+[138/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rwnx_misc.c.obj
+[139/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rw_tx_buffering.c.obj
+[140/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rwm_proto.c.obj
+[141/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rw_ieee80211.c.obj
+[142/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rwnx_td.c.obj
+[143/601] Linking C static library armino\vnd_cal\libvnd_cal.a
+[3/669] Generating _build/security.h
+DEBUG:root:parse csv_file=ppc.csv
+DEBUG:root:ppc.csv support prefered csv fields
+DEBUG:root:parse csv_file=gpio_dev.csv
+DEBUG:root:gpio_dev.csv support prefered csv fields
+DEBUG:root:Create _ppc.h
+DEBUG:root:Create tfm_hal_ppc.h
+DEBUG:root:parse csv_file=mpc.csv
+DEBUG:root:mpc.csv support prefered csv fields
+DEBUG:root:Create _mpc.h
+DEBUG:root:parse csv_file=security.csv
+DEBUG:root:Create security.h
+DEBUG:root:parse csv_file=ota.csv
+DEBUG:root:Field app_security_counter of ota.csv not supported
+DEBUG:root:Create _ota.h
+DEBUG:root:Create _otp.h
+DEBUG:root:Create _otp.c
+DEBUG:root:parse csv_file=ota.csv
+DEBUG:root:Field app_security_counter of ota.csv not supported
+[144/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/hostapd_intf.c.obj
+[145/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rw_msg_rx.c.obj
+[146/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rwnx_params.c.obj
+[147/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rw_task.c.obj
+[148/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rwnx_rx.c.obj
+[149/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/bk_wifi_adapter.c.obj
+[150/601] Linking C static library armino\bk_ate\libbk_ate.a
+[151/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rw_msg_tx.c.obj
+[152/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/sa_ap.c.obj
+[153/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/wifi_config.c.obj
+[154/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rwnx_tx.c.obj
+[155/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rwnx_txq.c.obj
+[4/669] Building C object armino/bk_common/CMakeFiles/__armino_bk_common.dir/bk_feature.c.obj
+[156/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/rwnx_utils.c.obj
+[5/669] Building C object armino/bk_startup/CMakeFiles/__armino_bk_startup.dir/freertos/rtos_init.c.obj
+[157/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/sa_station.c.obj
+[158/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/soft_encrypt.c.obj
+[6/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/dma_hal.c.obj
+[159/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/skbuff.c.obj
+[7/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/icu_hal.c.obj
+[8/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/wdt_hal.c.obj
+[160/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/wifi_frame.c.obj
+[9/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/i2c_hal.c.obj
+[10/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/timer_hal.c.obj
+[161/601] Linking C static library armino\iperf\libiperf.a
+[11/669] Building C object armino/bk_event/CMakeFiles/__armino_bk_event.dir/event.c.obj
+[162/601] Building C object armino/uart_debug/CMakeFiles/__armino_uart_debug.dir/command_ate_adc.c.obj
+[12/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/spi_hal.c.obj
+[163/601] Building C object armino/uart_debug/CMakeFiles/__armino_uart_debug.dir/command_ate.c.obj
+[13/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/trng_hal.c.obj
+[164/601] Building C object armino/uart_debug/CMakeFiles/__armino_uart_debug.dir/cmd_help.c.obj
+[14/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/flash_hal.c.obj
+[15/669] Building C object armino/bk_startup/CMakeFiles/__armino_bk_startup.dir/system_main.c.obj
+[165/601] Building C object armino/uart_debug/CMakeFiles/__armino_uart_debug.dir/command_ate_audio.c.obj
+[16/669] Linking C static library armino\bk_common\libbk_common.a
+[166/601] Building C object armino/uart_debug/CMakeFiles/__armino_uart_debug.dir/command_ate_vdddig.c.obj
+[167/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/wifi_api.c.obj
+[17/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/mbox0_hal.c.obj
+[18/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/uart_hal.c.obj
+[168/601] Building C object armino/uart_debug/CMakeFiles/__armino_uart_debug.dir/cmd_reg.c.obj
+[169/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/wifi_init.c.obj
+[19/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/gpio_hal.c.obj
+[170/601] Building C object armino/uart_debug/CMakeFiles/__armino_uart_debug.dir/udebug.c.obj
+[20/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/jpeg_hal.c.obj
+[171/601] Building C object armino/bk_adapter/CMakeFiles/__armino_bk_adapter.dir/lib_adapter.c.obj
+[21/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/sdio_host_hal.c.obj
+[172/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/wifi_netif.c.obj
+[22/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/yuv_buf_hal.c.obj
+[173/601] Building C object armino/uart_debug/CMakeFiles/__armino_uart_debug.dir/command_table.c.obj
+[23/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/qspi_hal.c.obj
+[174/601] Building C object armino/uart_debug/CMakeFiles/__armino_uart_debug.dir/command_ate_memcheck.c.obj
+[24/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/adc_hal.c.obj
+[175/601] Linking C static library armino\bk_system\libbk_system.a
+[25/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/sdio_hal.c.obj
+[176/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/bk_patch/signal.c.obj
+[26/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/h264_hal.c.obj
+[27/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/aud_hal.c.obj
+[177/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/wifi_at.c.obj
+[178/601] Building C object armino/uart_debug/CMakeFiles/__armino_uart_debug.dir/command_line.c.obj
+[28/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/psram_hal.c.obj
+[29/669] Linking C static library armino\bk_event\libbk_event.a
+[30/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/psram_ll.c.obj
+[31/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/sdmadc_hal.c.obj
+[32/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/dma2d_hal.c.obj
+[33/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/mpu_cfg.c.obj
+[179/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/wifi_wpa_cmd.c.obj
+[34/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/pwm_ll.c.obj
+[35/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/lcd_disp_hal.c.obj
+[180/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/bk_patch/sk_intf.c.obj
+[36/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/timer_ll.c.obj
+[181/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/bk_patch/ddrv.c.obj
+[37/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/pwm_hal_debug.c.obj
+[38/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/scale0_hal.c.obj
+[39/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/timer_hal_debug.c.obj
+[40/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/timer_hal.c.obj
+[41/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/scale1_hal.c.obj
+[42/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/gpio_ll.c.obj
+[43/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/dma_ll.c.obj
+[44/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/dma_hal_debug.c.obj
+[45/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/uart_ll.c.obj
+[182/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/ap_config.c.obj
+[46/669] Linking C static library armino\bk_startup\libbk_startup.a
+[183/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/bk_patch/fake_socket.c.obj
+[47/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/gpio_hal_debug.c.obj
+[184/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/ap_mlme.c.obj
+[48/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/icu_hal_debug.c.obj
+[49/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/jpeg_dec_hal.c.obj
+[185/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/ap_list.c.obj
+[50/669] Building C object armino/common/CMakeFiles/__armino_common.dir/hal/pwm_hal_v1px.c.obj
+[186/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/hostapd/main_none.c.obj
+[51/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/wdt_ll.c.obj
+[52/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/icu_ll.c.obj
+[53/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/trng_ll.c.obj
+[54/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/trng_hal_debug.c.obj
+[187/601] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/wifi_v2.c.obj
+[55/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/uart_hal_debug.c.obj
+[56/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/efuse_ll.c.obj
+[57/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/efuse_hal_debug.c.obj
+[188/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/ap_drv_ops.c.obj
+[189/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/drv_callbacks.c.obj
+[58/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/spi_ll.c.obj
+[190/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/ieee802_11_auth.c.obj
+[59/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/wdt_hal_debug.c.obj
+[60/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/spi_hal_debug.c.obj
+[61/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/adc_ll.c.obj
+[191/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/dfs.c.obj
+[62/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/sys_pm_hal_ctrl.c.obj
+[192/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/hw_features.c.obj
+[193/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/beacon.c.obj
+[63/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/i2c_ll.c.obj
+[194/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/ieee802_11_he.c.obj
+[64/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/i2c_hal_debug.c.obj
+[65/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/adc_hal_debug.c.obj
+[66/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/sys_pm_hal_debug.c.obj
+[67/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/jpeg_ll.c.obj
+[195/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/ieee802_11_shared.c.obj
+[68/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/calendar_ll.c.obj
+[69/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/flash_ll.c.obj
+[70/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/jpeg_hal_debug.c.obj
+[196/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/ieee802_11_ht.c.obj
+[71/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/sys_hal_debug.c.obj
+[72/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/calendar_hal_debug.c.obj
+[197/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/ieee802_11_vht.c.obj
+[73/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/flash_hal_debug.c.obj
+[74/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/sdio_hal_debug.c.obj
+[198/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/pmksa_cache_auth.c.obj
+[75/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/yuv_buf_hal_debug.c.obj
+[199/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/hostapd.c.obj
+[76/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/dma2d_hal_debug.c.obj
+[200/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/ieee802_11.c.obj
+[77/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/aon_pmu_hal.c.obj
+[78/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/sys_clock_hal_debug.c.obj
+[79/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/aon_pmu_hal_debug.c.obj
+[201/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/tkip_countermeasures.c.obj
+[202/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/ieee802_1x.c.obj
+[80/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/qspi_hal_debug.c.obj
+[81/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/sys_pm_hal.c.obj
+[203/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/sta_info.c.obj
+[82/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/lin_ll.c.obj
+[83/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/ckmn_hal_debug.c.obj
+[204/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/utils.c.obj
+[84/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/lin_hal_debug.c.obj
+[205/601] Linking C static library armino\bk_wifi\libbk_wifi.a; Check bk_wifi/include/generated/ directory have changes not submitted ...
+[85/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/ckmn_ll.c.obj
+[86/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/i2s_hal.c.obj
+[87/669] Linking C static library armino\common\libcommon.a
+[88/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/sdmadc_hal_debug.c.obj
+[89/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_ble.c.obj
+[206/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/wpa_auth_ie.c.obj
+[207/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/wmm.c.obj
+[208/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/common/hw_features_common.c.obj
+[90/669] Building C object armino/bk7258_ap/CMakeFiles/__armino_bk7258_ap.dir/hal/sys_hal.c.obj
+[209/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/common/ocv.c.obj
+[210/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/wpa_auth_glue.c.obj
+[91/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_event.c.obj
+[92/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_common.c.obj
+[211/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/common/wpa_psk_cache.c.obj
+[93/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_mico.c.obj
+[212/601] Linking C static library armino\uart_debug\libuart_debug.a
+[213/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/drivers/driver_common.c.obj
+[94/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_adc.c.obj
+[95/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_gpio.c.obj
+[96/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_os.c.obj
+[214/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/drivers/drivers.c.obj
+[215/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/common/ieee802_11_common.c.obj
+[97/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_rpc.c.obj
+[216/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/common/wpa_common.c.obj
+[98/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_misc.c.obj
+[217/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/rsn_supp/pmksa_cache.c.obj
+[99/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_main.c.obj
+[218/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/rsn_supp/wpa_ie.c.obj
+[100/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_mem.c.obj
+[101/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_timer.c.obj
+[219/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/l2_packet/l2_packet_none.c.obj
+[102/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_fpb.c.obj
+[103/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_exception.c.obj
+[104/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_dwt.c.obj
+[105/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_uart.c.obj
+[220/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/ap/wpa_auth.c.obj
+[106/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_reg.c.obj
+[221/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/utils/crc32.c.obj
+[107/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_spi.c.obj
+[108/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_iperf.c.obj
+[222/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/utils/common.c.obj
+[223/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/utils/wpa_debug.c.obj
+[109/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_ota.c.obj
+[224/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/utils/os_none.c.obj
+[225/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/rsn_supp/wpa.c.obj
+[226/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/drivers/driver_beken.c.obj
+[227/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/utils/wpabuf.c.obj
+[110/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_sd.c.obj
+[228/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/bssid_ignore.c.obj
+[111/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_pwr.c.obj
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_cli/cli_pwr.c: In function 'cli_pm_cmd':
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_cli/cli_pwr.c:113:26: warning: unused variable 'touch_wakeup_param' [-Wunused-variable]
+  113 |  touch_wakeup_param_t    touch_wakeup_param       = {0};
+      |                          ^~~~~~~~~~~~~~~~~~
+[229/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/utils/eloop.c.obj
+[112/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_flash.c.obj
+[113/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_dma.c.obj
+[114/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_i2c.c.obj
+[115/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_pwm.c.obj
+[116/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_trng.c.obj
+[230/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/main_supplicant.c.obj
+[231/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/config_none.c.obj
+[232/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/bss.c.obj
+[117/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/rpc_client_gpio.c.obj
+[118/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_netif.c.obj
+[119/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_sdio_host.c.obj
+[120/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_flash_test.c.obj
+[121/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_fatfs.c.obj
+[233/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/crypto/aes-siv.c.obj
+[122/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_vfs.c.obj
+[123/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_jpegenc.c.obj
+[124/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_usb.c.obj
+[125/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_qspi.c.obj
+[234/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/notify.c.obj
+[235/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/crypto/dh_group5.c.obj
+[126/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_i2s.c.obj
+[236/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/config.c.obj
+[237/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/sme.c.obj
+[238/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/op_classes.c.obj
+[239/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/wmm_ac.c.obj
+[127/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/shell_uart.c.obj
+[240/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/ctrl_iface.c.obj
+[128/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/shell_mailbox_cp1.c.obj
+[241/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/crypto/dh_groups.c.obj
+[242/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/crypto/sha1-prf.c.obj
+[129/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_aon_rtc.c.obj
+[130/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_lwip.c.obj
+[131/669] Linking C static library armino\bk7258_ap\libbk7258_ap.a
+[243/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/wpas_glue.c.obj
+[132/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_interrupt.c.obj
+[244/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/crypto/sha256-kdf.c.obj
+[133/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_sdmadc.c.obj
+[245/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/events.c.obj
+[134/669] Building C object armino/http/CMakeFiles/__armino_http.dir/lite-log.c.obj
+[246/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/wnm_sta.c.obj
+[247/601] Linking C static library armino\bk_adapter\libbk_adapter.a
+[135/669] Building C object armino/http/CMakeFiles/__armino_http.dir/utils_timer.c.obj
+[136/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/cli_modem.c.obj
+[137/669] Building C object armino/ota/CMakeFiles/__armino_ota.dir/ota_base_drv.c.obj
+[138/669] Building C object armino/ota/CMakeFiles/__armino_ota.dir/CheckSumUtils.c.obj
+[139/669] Building C object armino/bk_cli/CMakeFiles/__armino_bk_cli.dir/shell_task.c.obj
+[248/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/crypto/sha384-kdf.c.obj
+[249/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/crypto/sha256-prf.c.obj
+[140/669] Building C object armino/ota/CMakeFiles/__armino_ota.dir/ota.c.obj
+[250/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/wpa_scan.c.obj
+[251/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/crypto/sha512-prf.c.obj
+[141/669] Building C object armino/bk_system/CMakeFiles/__armino_bk_system.dir/delay.c.obj
+[142/669] Building C object armino/bk_system/CMakeFiles/__armino_bk_system.dir/reboot.c.obj
+[143/669] Building C object armino/bk_system/CMakeFiles/__armino_bk_system.dir/printf_base.c.obj
+[144/669] Building C object armino/bk_system/CMakeFiles/__armino_bk_system.dir/os/freertos/tick.c.obj
+[252/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/crypto/sha512-kdf.c.obj
+[145/669] Building C object armino/bk_init/CMakeFiles/__armino_bk_init.dir/components_init.c.obj
+[253/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/crypto/sha384-prf.c.obj
+[146/669] Building C object armino/http/CMakeFiles/__armino_http.dir/utils_net.c.obj
+[254/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/crypto/tls_none.c.obj
+[147/669] Building C object armino/http/CMakeFiles/__armino_http.dir/utils_httpc.c.obj
+[255/601] Building C object armino/bk_netif/CMakeFiles/__armino_bk_netif.dir/bk_at_netif.c.obj
+[148/669] Building C object armino/bk_init/CMakeFiles/__armino_bk_init.dir/bk_init.c.obj
+[256/601] Building C object armino/bk_netif/CMakeFiles/__armino_bk_netif.dir/bk_netif.c.obj
+[257/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/common/dragonfly.c.obj
+[149/669] Building C object armino/bk_system/CMakeFiles/__armino_bk_system.dir/printf.c.obj
+[258/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/wpa_supplicant/wpa_supplicant.c.obj
+[150/669] Building C object armino/bk_system/CMakeFiles/__armino_bk_system.dir/mac.c.obj
+[259/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/port/sys_arch.c.obj
+[151/669] Building C object armino/app/CMakeFiles/__armino_app.dir/littlefs_demo/lfs_example_onchip_flash.c.obj
+[260/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/port/wlanif.c.obj
+[152/669] Linking C static library armino\bk_cli\libbk_cli.a
+[153/669] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/phy_client.c.obj
+[154/669] Building C object armino/iperf/CMakeFiles/__armino_iperf.dir/iperf.c.obj
+[261/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/err.c.obj
+[155/669] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/net_param.c.obj
+[262/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/api_lib.c.obj
+[156/669] Building C object armino/bk_bluetooth/CMakeFiles/__armino_bk_bluetooth.dir/api/bt_main.c.obj
+[263/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/common/sae.c.obj
+[157/669] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/phy_notify.c.obj
+[264/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/port/net.c.obj
+[158/669] Building C object armino/bk_bluetooth/CMakeFiles/__armino_bk_bluetooth.dir/hci/hal_hci_core.c.obj
+[265/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/netifapi.c.obj
+[159/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/port/hwcsum.c.obj
+[266/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/netbuf.c.obj
+[267/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/api_msg.c.obj
+[160/669] Linking C static library armino\http\libhttp.a
+[268/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/netdb.c.obj
+[269/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/tcpip.c.obj
+[161/669] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/wifi_api_ipc.c.obj
+[270/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/def.c.obj
+[162/669] Building C object armino/bk_bluetooth/CMakeFiles/__armino_bk_bluetooth.dir/feat_config/bt_feature_config.c.obj
+[163/669] Building C object armino/bk_bluetooth/CMakeFiles/__armino_bk_bluetooth.dir/ipc/src/bt_ipc_core.c.obj
+[164/669] Building C object armino/bk_bluetooth/CMakeFiles/__armino_bk_bluetooth.dir/api/ble_gap_export_api.c.obj
+[165/669] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/wifi_cli.c.obj
+[271/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/apps/mdns/mdns.c.obj
+[272/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/apps/ping/ping.c.obj
+[166/669] Building C object armino/bk_bluetooth/CMakeFiles/__armino_bk_bluetooth.dir/soc/bk7236/bluetooth.c.obj
+[273/601] Building C object armino/wpa_supplicant-2.10/CMakeFiles/__armino_wpa_supplicant-2.10.dir/src/crypto/crypto_mbedtls.c.obj
+[167/669] Building C object armino/bk_wifi/CMakeFiles/__armino_bk_wifi.dir/src/wifi_api.c.obj
+[274/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/autoip.c.obj
+[275/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/inet_chksum.c.obj
+[276/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ip.c.obj
+[277/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/dns.c.obj
+[278/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/init.c.obj
+[168/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/port/wlanif.c.obj
+[169/669] Linking C static library armino\ota\libota.a
+[170/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/err.c.obj
+[279/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/icmp.c.obj
+[171/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/port/sys_arch.c.obj
+[280/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/dhcp6.c.obj
+[172/669] Building C object armino/bk_netif/CMakeFiles/__armino_bk_netif.dir/bk_netif.c.obj
+[173/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/api_lib.c.obj
+[281/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/etharp.c.obj
+[282/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/ip4_napt.c.obj
+[174/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/port/net.c.obj
+[283/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/ip4_addr.c.obj
+[175/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/netbuf.c.obj
+[176/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/api_msg.c.obj
+[177/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/apps/mdns/mdns.c.obj
+[284/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/ip4.c.obj
+[178/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/netdb.c.obj
+[285/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/dhcp.c.obj
+[179/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/netifapi.c.obj
+[286/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/igmp.c.obj
+[180/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/tcpip.c.obj
+[287/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/sockets.c.obj
+[288/601] Linking C static library armino\wpa_supplicant-2.10\libwpa_supplicant-2.10.a
+[181/669] Linking C static library armino\bk_init\libbk_init.a
+[289/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/ip4_frag.c.obj
+[182/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/apps/ifaddrs/lwip_ifaddrs.c.obj
+[290/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/ip6_addr.c.obj
+[291/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/inet6.c.obj
+[292/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/icmp6.c.obj
+[293/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/ethip6.c.obj
+[183/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/apps/ping/ping.c.obj
+[294/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/ip6.c.obj
+[295/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/mld6.c.obj
+[184/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/apps/tftp/tftp_server.c.obj
+[296/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/nd6.c.obj
+[185/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/if_api.c.obj
+[297/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/ip6_frag.c.obj
+[186/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/inet_chksum.c.obj
+[187/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/def.c.obj
+[188/669] Linking C static library armino\iperf\libiperf.a
+[298/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/mem.c.obj
+[189/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ip.c.obj
+[299/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/sys.c.obj
+[300/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/memp.c.obj
+[190/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/autoip.c.obj
+[191/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/dns.c.obj
+[301/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/netif.c.obj
+[302/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/stats.c.obj
+[192/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/api/sockets.c.obj
+[303/601] Linking C static library armino\bk_netif\libbk_netif.a
+[193/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/ip4_addr.c.obj
+[304/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/raw.c.obj
+[305/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/pbuf.c.obj
+[194/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/init.c.obj
+[195/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/igmp.c.obj
+[196/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/icmp.c.obj
+[197/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/etharp.c.obj
+[198/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/ip4.c.obj
+[306/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/tcp_out.c.obj
+[307/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/timeouts.c.obj
+[199/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/ip4_frag.c.obj
+[308/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/debug.c.obj
+[200/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/ip4_napt.c.obj
+[309/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/udp.c.obj
+[201/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/dhcp6.c.obj
+[202/669] Linking C static library armino\bk_system\libbk_system.a
+[310/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ethernet.c.obj
+[311/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/tcp.c.obj
+[203/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv4/dhcp.c.obj
+[312/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/dhcpd/dhcp-server-main.c.obj
+[204/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/ethip6.c.obj
+[313/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/dhcpd/dhcp-server.c.obj
+[205/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/icmp6.c.obj
+[314/601] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/tcp_in.c.obj
+[206/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/inet6.c.obj
+[207/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/ip6_addr.c.obj
+[208/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/mld6.c.obj
+[315/601] Building C object armino/controller_if/CMakeFiles/__armino_controller_if.dir/cif_co_list.c.obj
+[209/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/ip6_frag.c.obj
+[316/601] Building C object armino/bk_pm/CMakeFiles/__armino_bk_pm.dir/pm_model.c.obj
+[317/601] Building C object armino/bk_pm/CMakeFiles/__armino_bk_pm.dir/low_vol.c.obj
+[210/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/nd6.c.obj
+[211/669] Linking C static library armino\app\libapp.a
+[318/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_driver_common.c.obj
+[319/601] Building C object armino/controller_if/CMakeFiles/__armino_controller_if.dir/cif_ps.c.obj
+[212/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/memp.c.obj
+[320/601] Building C object armino/controller_if/CMakeFiles/__armino_controller_if.dir/cif_wifi_dp.c.obj
+[213/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/ipv6/ip6.c.obj
+[321/601] Building C object armino/controller_if/CMakeFiles/__armino_controller_if.dir/cif_main.c.obj
+[214/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/raw.c.obj
+[322/601] Building C object armino/controller_if/CMakeFiles/__armino_controller_if.dir/cif_cntrl.c.obj
+[323/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_driver.c.obj
+[215/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/mem.c.obj
+[324/601] Building C object armino/controller_if/CMakeFiles/__armino_controller_if.dir/cif_ipc.c.obj
+[216/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/stats.c.obj
+[325/601] Building C object armino/bk_pm/CMakeFiles/__armino_bk_pm.dir/pm_misc.c.obj
+[326/601] Building C object armino/controller_if/CMakeFiles/__armino_controller_if.dir/cif_mem_mgmt.c.obj
+[327/601] Linking C static library armino\lwip_intf_v2_1\liblwip_intf_v2_1.a
+[328/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_ps_driver.c.obj
+[217/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/netif.c.obj
+[329/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/reset_reason/reset_reason.c.obj
+[218/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/sys.c.obj
+[219/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/debug.c.obj
+[220/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/pbuf.c.obj
+[221/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/tcp.c.obj
+[330/601] Building C object armino/controller_if/CMakeFiles/__armino_controller_if.dir/cif_wifi_api.c.obj
+[222/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/timeouts.c.obj
+[223/669] Linking C static library armino\bk_wifi\libbk_wifi.a
+[331/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_clock_driver.c.obj
+[332/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_bt_driver.c.obj
+[224/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/udp.c.obj
+[333/601] Building C object armino/bk_pm/CMakeFiles/__armino_bk_pm.dir/pm.c.obj
+[334/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/common/driver.c.obj
+[225/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/dhcpd/dhcp-server-main.c.obj
+[226/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ethernet.c.obj
+[335/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_int_driver.c.obj
+[336/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_video_driver.c.obj
+[227/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/port/modemif.c.obj
+[337/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_audio_driver.c.obj
+[228/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/tcp_out.c.obj
+[338/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_wifi_driver.c.obj
+[229/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/core/tcp_in.c.obj
+[339/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_touch_driver.c.obj
+[230/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/dhcpd/dhcp-server.c.obj
+[340/601] Linking C static library armino\controller_if\libcontroller_if.a
+[231/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/ccp.c.obj
+[232/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/chap-md5.c.obj
+[341/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/icu/interrupt_base.c.obj
+[342/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_psram_driver.c.obj
+[233/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/chap-new.c.obj
+[343/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/icu/icu_driver.c.obj
+[234/669] Linking C static library armino\bk_bluetooth\libbk_bluetooth.a
+[344/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/common/drv_model.c.obj
+[235/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/chap_ms.c.obj
+[236/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/auth.c.obj
+[345/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/saradc/cli_adc_api.c.obj
+[237/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/eap.c.obj
+[346/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/saradc/cli_sadc_api.c.obj
+[238/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/ecp.c.obj
+[347/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/uart/uart_statis.c.obj
+[239/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/eui64.c.obj
+[240/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/demand.c.obj
+[348/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/saradc/adc_cmd_api.c.obj
+[241/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/ipv6cp.c.obj
+[349/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/timer/timer_driver.c.obj
+[350/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/pmu/aon_pmu_driver.c.obj
+[351/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_ctrl.c.obj
+[242/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/fsm.c.obj
+[352/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/saradc/adc_statis.c.obj
+[353/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/wdt/wdt_driver.c.obj
+[243/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/mppe.c.obj
+[244/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/multilink.c.obj
+[245/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/magic.c.obj
+[246/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/pppcrypt.c.obj
+[354/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/saradc/saradc_notify.c.obj
+[247/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/pppoe.c.obj
+[355/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/uart/printf.c.obj
+[248/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/pppol2tp.c.obj
+[356/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/gpio/gpio_driver_base.c.obj
+[249/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/pppapi.c.obj
+[357/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/saradc/saradc_server.c.obj
+[250/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/ipcp.c.obj
+[251/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/lcp.c.obj
+[358/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/saradc/adc_driver.c.obj
+[252/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/upap.c.obj
+[359/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/pwr_clk/rosc_32k.c.obj
+[253/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/utils.c.obj
+[360/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/aon_wdt/aon_wdt_driver.c.obj
+[361/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/chip_support/chip_support.c.obj
+[254/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/ppp.c.obj
+[362/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/pwr_clk/rosc_ppm.c.obj
+[255/669] Linking C static library armino\bk_netif\libbk_netif.a
+[363/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/uart/uart_driver.c.obj
+[256/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/polarssl/md5.c.obj
+[257/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/pppos.c.obj
+[364/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/pwr_clk/low_pwr_core.c.obj
+[258/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/polarssl/md4.c.obj
+[365/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/pwr_clk/pwr_clk.c.obj
+[366/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/efuse/efuse_driver.c.obj
+[259/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/polarssl/arc4.c.obj
+[367/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/pwr_clk/low_pwr_misc.c.obj
+[260/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/vj.c.obj
+[261/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/polarssl/sha1.c.obj
+[262/669] Building C object armino/lwip_intf_v2_1/CMakeFiles/__armino_lwip_intf_v2_1.dir/lwip-2.1.2/src/netif/ppp/polarssl/des.c.obj
+[368/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/trng/trng_driver.c.obj
+[369/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/flash/flash_partition.c.obj
+[263/669] Building C object armino/bk_wifi_driver/CMakeFiles/__armino_bk_wifi_driver.dir/wdrv_co_list.c.obj
+[370/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/irda/irda.c.obj
+[371/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/flash/flash_notify.c.obj
+[372/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/flash/flash_driver.c.obj
+[264/669] Building C object armino/bk_wifi_driver/CMakeFiles/__armino_bk_wifi_driver.dir/wdrv_main.c.obj
+[265/669] Building C object armino/bk_wifi_driver/CMakeFiles/__armino_bk_wifi_driver.dir/wdrv_rx.c.obj
+[373/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/flash/flash_svr_test.c.obj
+[266/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_driver.c.obj
+[374/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/general_dma/dma_driver.c.obj
+[267/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_driver_common.c.obj
+[375/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/flash/flash_bypass.c.obj
+[268/669] Building C object armino/bk_wifi_driver/CMakeFiles/__armino_bk_wifi_driver.dir/wdrv_ipc.c.obj
+[269/669] Building C object armino/bk_wifi_driver/CMakeFiles/__armino_bk_wifi_driver.dir/wdrv_cntrl.c.obj
+[376/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/psram/psram_driver.c.obj
+[377/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/flash/flash_server.c.obj
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/flash/flash_server.c: In function 'flash_cmd_handler':
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/flash/flash_server.c:483:27: warning: implicit declaration of function 'mb_ipc_get_user_cmd' [-Wimplicit-function-declaration]
+  483 |  u8            user_cmd = mb_ipc_get_user_cmd(handle);
+      |                           ^~~~~~~~~~~~~~~~~~~
+[270/669] Building C object armino/bk_wifi_driver/CMakeFiles/__armino_bk_wifi_driver.dir/wdrv_tx.c.obj
+[378/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/flash/flash_driver_ext.c.obj
+[379/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/dsp/dsp.c.obj
+[271/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_bt_driver.c.obj
+[272/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_int_driver.c.obj
+[380/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/touch/touch_driver_v1_1.c.obj
+[273/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_ps_driver.c.obj
+[381/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mbox0_drv.c.obj
+[274/669] Linking C static library armino\lwip_intf_v2_1\liblwip_intf_v2_1.a
+[382/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/otp/otp_driver_v1_1.c.obj
+[275/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/reset_reason/reset_reason.c.obj
+[276/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_clock_driver.c.obj
+[383/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/rtc/aon_rtc_driver_64bit.c.obj
+[384/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mbox0_adapter.c.obj
+[277/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_wifi_driver.c.obj
+[278/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_video_driver.c.obj
+[385/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/spinlock/spinlock.c.obj
+[279/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_audio_driver.c.obj
+[280/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/common/driver.c.obj
+[386/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mailbox_channel.c.obj
+[281/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_psram_driver.c.obj
+[387/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/bk7258/interrupt_statis.c.obj
+[388/601] Linking C static library armino\bk_pm\libbk_pm.a
+[282/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/common/drv_model.c.obj
+[283/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_touch_driver.c.obj
+[389/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mb_chnl_buff.c.obj
+[284/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/icu/icu_driver.c.obj
+[390/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/bk_api_ipc_test.c.obj
+[391/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mb_ipc_cmd.c.obj
+[392/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/spinlock/amp_res_lock.c.obj
+[285/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/icu/interrupt_base.c.obj
+[393/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mb_ipc_heartbeat.c.obj
+[394/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/bk7258/interrupt.c.obj
+[395/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/bk_api_ipc.c.obj
+[396/601] Building C object armino/bk_phy/CMakeFiles/__armino_bk_phy.dir/src/bk_phy_api.c.obj
+[286/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/uart/uart_statis.c.obj
+[397/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mb_ipc.c.obj
+[287/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/saradc/saradc_example.c.obj
+[398/601] Building C object armino/bk_phy/CMakeFiles/__armino_bk_phy.dir/src/bk_rf_adapter.c.obj
+[288/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/wdt/wdt_driver.c.obj
+[289/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/pmu/aon_pmu_driver.c.obj
+[399/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/ckmn/ckmn_driver.c.obj
+[400/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mb_uart_driver.c.obj
+[401/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/bk7258/gpio_driver.c.obj
+[290/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/timer/timer_driver.c.obj
+[402/601] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sdmadc/sdmadc_driver.c.obj
+[403/601] Building C object armino/bk_phy/CMakeFiles/__armino_bk_phy.dir/src/bk_phy_server.c.obj
+[291/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/saradc/saradc_client.c.obj
+[404/601] Building C object armino/temp_detect/CMakeFiles/__armino_temp_detect.dir/bk_sensor.c.obj
+[292/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_ctrl.c.obj
+[405/601] Building C object armino/bk_phy/CMakeFiles/__armino_bk_phy.dir/src/bk_phy_notify.c.obj
+[293/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/saradc/saradc_notify.c.obj
+[406/601] Building C object armino/bk_bluetooth/CMakeFiles/__armino_bk_bluetooth.dir/api/bt_main.c.obj
+[407/601] Building C object armino/bk_phy/CMakeFiles/__armino_bk_phy.dir/src/bk_phy_adapter.c.obj
+[408/601] Building C object armino/bk_bluetooth/CMakeFiles/__armino_bk_bluetooth.dir/hci/hal_hci_core.c.obj
+[294/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/gpio/gpio_driver_base.c.obj
+[409/601] Building C object armino/bk_bluetooth/CMakeFiles/__armino_bk_bluetooth.dir/feat_config/bt_feature_config.c.obj
+[295/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/uart/printf.c.obj
+[296/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/chip_support/chip_support.c.obj
+[410/601] Building C object armino/temp_detect/CMakeFiles/__armino_temp_detect.dir/temp_detect.c.obj
+[411/601] Building C object armino/temp_detect/CMakeFiles/__armino_temp_detect.dir/volt_detect.c.obj
+[297/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/pwr_clk/pwr_clk.c.obj
+[412/601] Linking C static library armino\driver\libdriver.a
+[298/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/uart/uart_driver.c.obj
+[413/601] Building C object armino/bk_bluetooth/CMakeFiles/__armino_bk_bluetooth.dir/api/ble_gap_export_api.c.obj
+[299/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/pwr_clk/pm_ap_misc.c.obj
+[414/601] Building C object armino/bk_bluetooth/CMakeFiles/__armino_bk_bluetooth.dir/ipc/src/bt_ipc_core.c.obj
+[415/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls_port/mbedtls/library/ecp_curves.c.obj
+[300/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sys_ctrl/sys_usb_driver.c.obj
+[416/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/dhm.c.obj
+[301/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/pwr_clk/pm_ap_core.c.obj
+[417/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ecdh.c.obj
+[302/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/yuv_buf/yuv_buf_driver.c.obj
+[303/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/i2c/i2c_statis.c.obj
+[418/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/cipher_wrap.c.obj
+[304/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/h264/h264_driver.c.obj
+[419/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ctr_drbg.c.obj
+[420/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/cipher.c.obj
+[305/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/hw_rotate/rott_driver.c.obj
+[421/601] Building C object armino/bk_bluetooth/CMakeFiles/__armino_bk_bluetooth.dir/soc/bk7236/bluetooth.c.obj
+[422/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/entropy_poll.c.obj
+[423/601] Linking C static library armino\bk_phy\libbk_phy.a
+[424/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ecdsa.c.obj
+[306/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/hw_scale/hw_scale_driver.c.obj
+[425/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/bignum.c.obj
+[307/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/flash/flash_bypass.c.obj
+[426/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto.c.obj
+[308/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/flash/flash_notify.c.obj
+[427/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/oid.c.obj
+[309/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/general_dma/dma_driver.c.obj
+[428/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/md.c.obj
+[429/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto_client.c.obj
+[310/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/i2c/i2c_driver.c.obj
+[430/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls_port/src/tls_mem.c.obj
+[431/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls_port/src/tls_hardware.c.obj
+[311/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/spi/spi_statis.c.obj
+[432/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ecp.c.obj
+[433/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/pkparse.c.obj
+[312/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/pwm/v1px/pwm_driver.c.obj
+[434/601] Linking C static library armino\temp_detect\libtemp_detect.a
+[313/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/lcd/lcd_spi.c.obj
+[435/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls_port/mbedtls/library/threading.c.obj
+[436/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls_port/mbedtls/library/platform.c.obj
+[314/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/trng/trng_driver.c.obj
+[315/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/flash/flash_partition.c.obj
+[437/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/pkcs7.c.obj
+[316/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/dma2d/dma2d_driver.c.obj
+[438/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/tests/src/certs.c.obj
+[317/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/flash/flash_client.c.obj
+[439/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/rsa.c.obj
+[318/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/jpeg_dec/jpeg_dec_driver.c.obj
+[319/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/spi/spi_flash.c.obj
+[440/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls_port/src/tls_connect.c.obj
+[320/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/lcd/lcd_driver.c.obj
+[321/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/flash/flash_svr_test.c.obj
+[322/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/i2s/i2s_driver.c.obj
+[441/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls_port/mbedtls/programs/test/selftest.c.obj
+[323/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/qspi/qspi_statis.c.obj
+[442/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/x509_create.c.obj
+[443/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/x509_crl.c.obj
+[324/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/qspi/qspi_psram.c.obj
+[444/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/x509write.c.obj
+[325/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/jpeg_enc/jpeg_statis.c.obj
+[445/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/x509_csr.c.obj
+[446/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls_port/mbedtls/library/net_sockets.c.obj
+[447/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/x509write_csr.c.obj
+[448/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_cache.c.obj
+[449/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/mps_reader.c.obj
+[450/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/mps_trace.c.obj
+[451/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/x509write_crt.c.obj
+[452/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/x509.c.obj
+[453/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_cookie.c.obj
+[326/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/qspi/qspi_flash_W25Q32.c.obj
+[454/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/debug.c.obj
+[327/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/qspi/qspi_flash.c.obj
+[455/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_debug_helpers_generated.c.obj
+[456/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_ciphersuites.c.obj
+[328/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/qspi/qspi_driver.c.obj
+[457/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_ticket.c.obj
+[329/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/spi/spi_driver.c.obj
+[330/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/qspi/qspi_flash_GD5F1GQ5.c.obj
+[458/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_client.c.obj
+[331/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/qspi/qspi_flash_GD25Q127C.c.obj
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/qspi/qspi_flash_GD25Q127C.c: In function 'bk_qspi_flash_gd25_erase_block':
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/qspi/qspi_flash_GD25Q127C.c:258:14: warning: unused variable 'aligned_address' [-Wunused-variable]
+  258 |     uint32_t aligned_address = addr & (~GD25_BLOCK_MASK);
+      |              ^~~~~~~~~~~~~~~
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/qspi/qspi_flash_GD25Q127C.c: In function 'bk_qspi_flash_gd5f_standrad_page_program':
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/qspi/qspi_flash_GD25Q127C.c:287:5: warning: implicit declaration of function 'bk_qspi_flash_gd5f_std_write_to_cache'; did you mean 'bk_qspi_flash_gd25_write_enable'? [-Wimplicit-function-declaration]
+  287 |     bk_qspi_flash_gd5f_std_write_to_cache(id, addr, data, size);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     bk_qspi_flash_gd25_write_enable
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/qspi/qspi_flash_GD25Q127C.c:294:5: warning: implicit declaration of function 'bk_qspi_flash_gd5f_execute_write' [-Wimplicit-function-declaration]
+  294 |     bk_qspi_flash_gd5f_execute_write(id, addr);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/qspi/qspi_flash_GD25Q127C.c: In function 'bk_qspi_flash_gd25_test':
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/qspi/qspi_flash_GD25Q127C.c:553:9: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+  553 |         return;
+      |         ^~~~~~
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/qspi/qspi_flash_GD25Q127C.c:526:10: note: declared here
+  526 | uint32_t bk_qspi_flash_gd25_test(uint32_t test_len)
+      |          ^~~~~~~~~~~~~~~~~~~~~~~
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/qspi/qspi_flash_GD25Q127C.c:560:9: warning: implicit declaration of function 'tkl_system_free' [-Wimplicit-function-declaration]
+  560 |         tkl_system_free(read_buffer);
+      |         ^~~~~~~~~~~~~~~
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/qspi/qspi_flash_GD25Q127C.c:562:9: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+  562 |         return;
+      |         ^~~~~~
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/qspi/qspi_flash_GD25Q127C.c:526:10: note: declared here
+  526 | uint32_t bk_qspi_flash_gd25_test(uint32_t test_len)
+      |          ^~~~~~~~~~~~~~~~~~~~~~~
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/qspi/qspi_flash_GD25Q127C.c:529:13: warning: unused variable 'status_reg_data' [-Wunused-variable]
+  529 |     uint8_t status_reg_data = 0;
+      |             ^~~~~~~~~~~~~~~
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/qspi/qspi_flash_GD25Q127C.c:528:14: warning: variable 'read_id_data' set but not used [-Wunused-but-set-variable]
+  528 |     uint32_t read_id_data;
+      |              ^~~~~~~~~~~~
+[332/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/psram/psram_driver.c.obj
+[459/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_tls13_server.c.obj
+[460/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_tls12_server.c.obj
+[333/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/qspi/qspi_flash_common.c.obj
+[461/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/x509_crt.c.obj
+[462/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_tls13_client.c.obj
+[334/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sd_card/sdcard_test.c.obj
+[463/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_tls13_keys.c.obj
+[464/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_tls13_generic.c.obj
+[465/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/aesni.c.obj
+[335/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/rtc/aon_rtc_driver_64bit.c.obj
+[466/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/aria.c.obj
+[336/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/jpeg_enc/jpeg_driver.c.obj
+[337/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/audio/aud/aud_common_driver.c.obj
+[467/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/camellia.c.obj
+[338/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mbox0_cross_core.c.obj
+[468/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_tls12_client.c.obj
+[339/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/lcd/lcd_qspi_driver.c.obj
+[340/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sd_card/sd_card_driver.c.obj
+[469/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/asn1parse.c.obj
+[341/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/audio/aud/aud_adc_driver.c.obj
+[470/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/chachapoly.c.obj
+[471/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/aes.c.obj
+[342/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/audio/aud/aud_dac_driver.c.obj
+[472/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/base64.c.obj
+[473/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/asn1write.c.obj
+[343/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sdio_host/sdio_host_driver.c.obj
+[474/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/des.c.obj
+[475/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/chacha20.c.obj
+[476/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ecp_curves_new.c.obj
+[477/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_msg.c.obj
+[344/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mbox0_adapter.c.obj
+[345/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/audio/audio_ring_buff.c.obj
+[478/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/bignum_core.c.obj
+[479/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/constant_time.c.obj
+[346/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mbox0_drv.c.obj
+[480/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ccm.c.obj
+[481/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ecjpake.c.obj
+[347/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/audio/aud/aud_dmic_driver.c.obj
+[348/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/dsp/dsp.c.obj
+[482/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ssl_tls.c.obj
+[483/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/error.c.obj
+[349/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/touch/touch_driver_v1_1.c.obj
+[484/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/hmac_drbg.c.obj
+[485/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/ripemd160.c.obj
+[350/669] Building C object armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_memory.c.obj
+FAILED: [code=1] armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_memory.c.obj 
+E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\tools\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe -D__FILE__=\"E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/system/tkl_memory.c\" -IE:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/config -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/misc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/adc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/atomic -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/bluetooth -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/cellular -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/flash -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/gpio -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/hci -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/i2c -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/i2s -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/init/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/media -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/network -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/pinmux -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/pwm -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/rtc/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/security -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/spi/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/qspi -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/system -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/timer -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/touch -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/uart -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/utilities/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/vad -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/vad/lib -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/wakeup -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/watchdog -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/wifi -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/wired -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/ipc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/kws -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/kws/libtutuClear -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/rgb -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/mcu8080 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/dvp -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/dma2d -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/jpeg_codec -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/bk7258_ap/config -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/include/modules/securityip -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/include/modules/freetype -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/include/modules/fdk_aac_enc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_common/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/common/soc/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/common/hal/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/partitions -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/bk7258_ap/soc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/bk7258_ap/hal -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/bk7258_ap -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/ap/config/bk7258_ap -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/partitions -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/boards/bk7258_ap/partitions -IE:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/armino/partitions/_build -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/release -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_startup/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/easy_flash -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/base64 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_init/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/os_source/freertos_smp_v2p0/FreeRTOS-Kernel/include/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/os_source/freertos_smp_v2p0/FreeRTOS-Kernel/include/additions -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/os_source/freertos_smp_v2p0/FreeRTOS-Kernel/portable/GCC/ARM_CM33_NTZ/non_secure -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/app -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_wifi/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_wifi/include/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_netif/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_cli/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_cli/include/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_cli -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/utf8 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/include/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/include/bk_private/legacy -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/common -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/reset_reason -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/pwm -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/flash -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/uart -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/sys_ctrl -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/gpio -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/general_dma -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/icu -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/i2c -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/sdcard -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/saradc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/pmu -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/mailbox -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/spinlock -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/touch -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/sbc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/rtc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/i2s -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/fft -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/chip_support -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/compal/common_io/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/wdt -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/timer -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/scr -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/slcd -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/pwr_clk -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/h264 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/yuv_buf -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/spi -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/jpeg_enc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/bk7258_ap -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/arch/cm33/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/arch/cm33/os/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/arch/cm33 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/fatfs -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/http -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/main -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/adc_key -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/key -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_websocket/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_rtos/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_rtos/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/cmsis/CMSIS_5/CMSIS/Core/Include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/cmsis/CMSIS_5/Device/Beken/bk7236xx/Include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/cmsis/CMSIS_5/Device/Beken/bk7236xx/Include/Template -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/cmsis/CMSIS_5/Device/Beken/armstar -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_ps/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_modem/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/lwip_intf_v2_1/lwip-2.1.2/src -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/lwip_intf_v2_1/lwip-2.1.2/port -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/lwip_intf_v2_1/lwip-2.1.2/src/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/lwip_intf_v2_1/lwip-2.1.2/src/include/netif -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/lwip_intf_v2_1/lwip-2.1.2/src/include/lwip -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/lwip_intf_v2_1/lwip-2.1.2/src/include/lwip/priv -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/display_service/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_vfs -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/multimedia/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/multimedia/pipeline -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/multimedia/camera -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/multimedia/cli -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/media_service/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/media_service/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/media_utils/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_peripheral/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_draw_blend -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/common -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/core -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/osal -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/class/cdc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/class/hid -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/class/msc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/class/audio -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/class/video -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/class/hub -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/demo -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/driver -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/demo/beken/usb_host -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/example/usbh_hub_multiple_classes -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/bk_usbh_simulate_uart -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/example/usb_cdc_acm -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/audio_record/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/audio_play/include -mcpu=cortex-m33+nodsp -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcmse -DWIFI_BLE_COEXIST -DCONFIG_CMAKE=1 -DBK_MAC=1 -Wl,--gc-sections -nostdlib -Wl,-wrap,malloc -Wl,-wrap,_malloc_r -Wl,-wrap,free -Wl,-wrap,_free_r -Wl,-wrap,zalloc -Wl,-wrap,calloc -Wl,-wrap,realloc  -Wl,-wrap,_realloc_r -Wl,-wrap,printf -Wl,-wrap,vsnprintf -Wl,-wrap,snprintf -Wl,-wrap,sprintf -Wl,-wrap,puts -Wl,-wrap,__assert_func -g -Os -nostdlib -Wall -Werror -Wno-address -Wno-array-bounds -Wno-format -Wno-unknown-pragmas -Wno-address-of-packed-member -Wno-deprecated-declarations -Wno-unused-value -Wno-unused-function -fno-builtin-printf -ffunction-sections -fsigned-char -fdata-sections -fno-strict-aliasing -ggdb -mcpu=cortex-m33+nodsp -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcmse -fstack-protector -IE:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/config -includesdkconfig.h -includeE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/partitions/ram_regions.h -Wno-builtin-macro-redefined -Wno-error -std=gnu99 -Wno-old-style-declaration "-Wl, --gc-sections" -D_GNU_SOURCE -DAPP_VERSION=\"1.0.0\" -DLIB_HASH=\"e4f7339447f4c89e725dc308e334ced5\" -DARMINO_SOC=bk7258_ap -DBEKEN_PLATFORM -DCONFIG_RELEASE_VERSION=1 -MD -MT armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_memory.c.obj -MF armino\tuyaos_adapter\CMakeFiles\__armino_tuyaos_adapter.dir\src\system\tkl_memory.c.obj.d -o armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_memory.c.obj -c E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/system/tkl_memory.c
+In file included from E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/system/tkl_memory.h:13,
+                 from E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/system/tkl_memory.c:12:
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/utilities/include/tuya_cloud_types.h:9:10: fatal error: tuya_iot_config.h: No such file or directory
+    9 | #include "tuya_iot_config.h"
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+[486/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/entropy.c.obj
+[487/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/sha512.c.obj
+[488/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/sha3.c.obj
+[351/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mb_ipc_cmd.c.obj
+[489/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/md5.c.obj
+[352/669] Building C object armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_mutex.c.obj
+FAILED: [code=1] armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_mutex.c.obj 
+E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\tools\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe -D__FILE__=\"E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/system/tkl_mutex.c\" -IE:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/config -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/misc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/adc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/atomic -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/bluetooth -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/cellular -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/flash -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/gpio -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/hci -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/i2c -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/i2s -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/init/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/media -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/network -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/pinmux -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/pwm -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/rtc/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/security -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/spi/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/qspi -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/system -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/timer -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/touch -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/uart -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/utilities/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/vad -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/vad/lib -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/wakeup -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/watchdog -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/wifi -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/wired -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/ipc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/kws -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/kws/libtutuClear -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/rgb -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/mcu8080 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/dvp -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/dma2d -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/jpeg_codec -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/bk7258_ap/config -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/include/modules/securityip -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/include/modules/freetype -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/include/modules/fdk_aac_enc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_common/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/common/soc/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/common/hal/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/partitions -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/bk7258_ap/soc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/bk7258_ap/hal -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/soc/bk7258_ap -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/ap/config/bk7258_ap -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/partitions -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/boards/bk7258_ap/partitions -IE:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/armino/partitions/_build -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/release -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_startup/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/easy_flash -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/base64 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_init/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/os_source/freertos_smp_v2p0/FreeRTOS-Kernel/include/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/os_source/freertos_smp_v2p0/FreeRTOS-Kernel/include/additions -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/os_source/freertos_smp_v2p0/FreeRTOS-Kernel/portable/GCC/ARM_CM33_NTZ/non_secure -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/app -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_wifi/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_wifi/include/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_netif/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_cli/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_cli/include/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_cli -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/utf8 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/include/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/include/bk_private/legacy -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/common -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/reset_reason -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/pwm -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/flash -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/uart -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/sys_ctrl -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/gpio -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/general_dma -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/icu -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/i2c -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/sdcard -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/saradc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/pmu -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/mailbox -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/spinlock -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/touch -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/sbc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/rtc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/i2s -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/fft -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/chip_support -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/compal/common_io/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/wdt -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/timer -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/scr -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/slcd -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/pwr_clk -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/h264 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/yuv_buf -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/spi -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/jpeg_enc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/driver/bk7258_ap -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/arch/cm33/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/arch/cm33/os/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/middleware/arch/cm33 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/fatfs -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/http -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/main -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/adc_key -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/key -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_websocket/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_rtos/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_rtos/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/cmsis/CMSIS_5/CMSIS/Core/Include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/cmsis/CMSIS_5/Device/Beken/bk7236xx/Include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/cmsis/CMSIS_5/Device/Beken/bk7236xx/Include/Template -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/cmsis/CMSIS_5/Device/Beken/armstar -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_ps/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_modem/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/lwip_intf_v2_1/lwip-2.1.2/src -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/lwip_intf_v2_1/lwip-2.1.2/port -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/lwip_intf_v2_1/lwip-2.1.2/src/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/lwip_intf_v2_1/lwip-2.1.2/src/include/netif -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/lwip_intf_v2_1/lwip-2.1.2/src/include/lwip -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/lwip_intf_v2_1/lwip-2.1.2/src/include/lwip/priv -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/display_service/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_vfs -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/multimedia/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/multimedia/pipeline -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/multimedia/camera -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/multimedia/cli -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/media_service/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/media_service/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/media_utils/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_peripheral/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_draw_blend -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/common -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/core -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/osal -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/class/cdc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/class/hid -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/class/msc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/class/audio -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/class/video -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/class/hub -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/demo -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/driver -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/CherryUSB/demo/beken/usb_host -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/example/usbh_hub_multiple_classes -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/bk_usbh_simulate_uart -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/bk_usb/example/usb_cdc_acm -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/audio_record/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap/components/audio_play/include -mcpu=cortex-m33+nodsp -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcmse -DWIFI_BLE_COEXIST -DCONFIG_CMAKE=1 -DBK_MAC=1 -Wl,--gc-sections -nostdlib -Wl,-wrap,malloc -Wl,-wrap,_malloc_r -Wl,-wrap,free -Wl,-wrap,_free_r -Wl,-wrap,zalloc -Wl,-wrap,calloc -Wl,-wrap,realloc  -Wl,-wrap,_realloc_r -Wl,-wrap,printf -Wl,-wrap,vsnprintf -Wl,-wrap,snprintf -Wl,-wrap,sprintf -Wl,-wrap,puts -Wl,-wrap,__assert_func -g -Os -nostdlib -Wall -Werror -Wno-address -Wno-array-bounds -Wno-format -Wno-unknown-pragmas -Wno-address-of-packed-member -Wno-deprecated-declarations -Wno-unused-value -Wno-unused-function -fno-builtin-printf -ffunction-sections -fsigned-char -fdata-sections -fno-strict-aliasing -ggdb -mcpu=cortex-m33+nodsp -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcmse -fstack-protector -IE:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258_ap/config -includesdkconfig.h -includeE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/partitions/ram_regions.h -Wno-builtin-macro-redefined -Wno-error -std=gnu99 -Wno-old-style-declaration "-Wl, --gc-sections" -D_GNU_SOURCE -DAPP_VERSION=\"1.0.0\" -DLIB_HASH=\"e4f7339447f4c89e725dc308e334ced5\" -DARMINO_SOC=bk7258_ap -DBEKEN_PLATFORM -DCONFIG_RELEASE_VERSION=1 -MD -MT armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_mutex.c.obj -MF armino\tuyaos_adapter\CMakeFiles\__armino_tuyaos_adapter.dir\src\system\tkl_mutex.c.obj.d -o armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_mutex.c.obj -c E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/system/tkl_mutex.c
+In file included from E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/system/tkl_mutex.h:13,
+                 from E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/system/tkl_mutex.c:11:
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/utilities/include/tuya_cloud_types.h:9:10: fatal error: tuya_iot_config.h: No such file or directory
+    9 | #include "tuya_iot_config.h"
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+[353/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mailbox_channel.c.obj
+[354/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/spinlock/spinlock.c.obj
+[355/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/bk7258_ap/interrupt_statis.c.obj
+[490/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/rsa_alt_helpers.c.obj
+[491/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/gcm.c.obj
+[356/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mb_ipc_heartbeat.c.obj
+[357/669] Linking C static library armino\bk_wifi_driver\libbk_wifi_driver.a
+[492/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/nist_kw.c.obj
+[493/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/pkcs12.c.obj
+[494/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/pk_wrap.c.obj
+[358/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/bk7258_ap/interrupt.c.obj
+[495/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/sha256.c.obj
+[496/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/pem.c.obj
+[497/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/poly1305.c.obj
+[498/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/pkcs5.c.obj
+[359/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/bk_api_ipc.c.obj
+[360/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/spinlock/amp_res_lock.c.obj
+[499/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_util.c.obj
+[500/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/pk.c.obj
+[361/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mb_chnl_buff.c.obj
+[501/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/pkwrite.c.obj
+[502/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto_cipher.c.obj
+[503/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/platform_util.c.obj
+[362/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mb_ipc.c.obj
+[363/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/bk_api_ipc_test.c.obj
+[364/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/mailbox/mb_uart_driver.c.obj
+[504/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto_slot_management.c.obj
+[365/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/bk7258_ap/gpio_driver.c.obj
+[505/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/sha1.c.obj
+[506/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/cmac.c.obj
+[507/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto_ecp.c.obj
+[508/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto_aead.c.obj
+[509/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto_rsa.c.obj
+[510/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto_ffdh.c.obj
+[511/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto_mac.c.obj
+[512/601] Linking C static library armino\bk_bluetooth\libbk_bluetooth.a
+[513/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto_hash.c.obj
+[366/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/pwr_clk/pm_ap_demo.c.obj
+[514/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto_pake.c.obj
+[515/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto_storage.c.obj
+[516/601] Building C object armino/bk_log/CMakeFiles/__armino_bk_log.dir/log.c.obj
+[517/601] Building C object armino/cm33/CMakeFiles/__armino_cm33.dir/fpb.c.obj
+[518/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto_se.c.obj
+[367/669] Building C object armino/driver/CMakeFiles/__armino_driver.dir/sdmadc/sdmadc_driver.c.obj
+ninja: build stopped: subcommand failed.
+ninja failed with exit code 1
+Executing action: all (aliases: build)
+Running ninja in directory e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os\build\bk7258\tuya_app\bk7258_ap
+Executing "ninja all"...
+[519/601] Building C object armino/cm33/CMakeFiles/__armino_cm33.dir/arm.c.obj
+[520/601] Building C object armino/base64/CMakeFiles/__armino_base64.dir/base_64.c.obj
+[521/601] Building C object armino/psa_mbedtls/CMakeFiles/__armino_psa_mbedtls.dir/mbedtls/library/psa_crypto_driver_wrappers_no_static.c.obj
+[522/601] Building C object armino/cm33/CMakeFiles/__armino_cm33.dir/jump.c.obj
+[523/601] Building C object armino/cm33/CMakeFiles/__armino_cm33.dir/dwt.c.obj
+[524/601] Building C object armino/cm33/CMakeFiles/__armino_cm33.dir/arch_delay.c.obj
+[525/601] Building C object armino/cm33/CMakeFiles/__armino_cm33.dir/arch_interrupt.c.obj
+make[1]: *** [E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/build_files/build_main.mk:128: bk7258_ap] Error 2
+make[1]: Leaving directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/ap'
+make: *** [tools/build_main.mk:112: bk7258_ap] Error 2
+make: *** Waiting for unfinished jobs....
+[526/601] Building C object armino/unity/CMakeFiles/__armino_unity.dir/extras/fixture/src/unity_fixture.c.obj
+[527/601] Building C object armino/cm33/CMakeFiles/__armino_cm33.dir/mpu.c.obj
+[528/601] Building C object armino/cmsis/CMakeFiles/__armino_cmsis.dir/CMSIS_5/Device/Beken/bk7236xx/Source/system_bk7236xx.c.obj
+[529/601] Building C object armino/cm33/CMakeFiles/__armino_cm33.dir/os/freertos/cpu.c.obj
+[530/601] Building C object armino/cm33/CMakeFiles/__armino_cm33.dir/stack_base.c.obj
+[531/601] Building C object armino/os_source/CMakeFiles/__armino_os_source.dir/freertos_v10/croutine.c.obj
+[532/601] Linking C static library armino\psa_mbedtls\libpsa_mbedtls.a
+[533/601] Building C object armino/os_source/CMakeFiles/__armino_os_source.dir/freertos_v10/list.c.obj
+[534/601] Building C object armino/os_source/CMakeFiles/__armino_os_source.dir/freertos_v10/portable/Common/mpu_wrappers.c.obj
+[535/601] Building C object armino/cm33/CMakeFiles/__armino_cm33.dir/trap_base.c.obj
+[536/601] Building C object armino/cmsis/CMakeFiles/__armino_cmsis.dir/CMSIS_5/Device/Beken/bk7236xx/Source/startup_bk7236.c.obj
+[537/601] Building C object armino/os_source/CMakeFiles/__armino_os_source.dir/freertos_v10/portable/GCC/ARM_CM33_NTZ/non_secure/portasm.c.obj
+[538/601] Building C object armino/os_source/CMakeFiles/__armino_os_source.dir/freertos_v10/event_groups.c.obj
+[539/601] Building C object armino/unity/CMakeFiles/__armino_unity.dir/src/unity.c.obj
+[540/601] Building C object armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_mutex.c.obj
+FAILED: [code=1] armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_mutex.c.obj 
+E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\tools\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe -D__FILE__=\"E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/system/tkl_mutex.c\" -IE:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/config -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/misc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/adc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/atomic -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/bluetooth -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/cellular -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/flash -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/gpio -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/hci -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/i2c -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/i2s -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/init/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/media -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/network -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/pinmux -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/pwm -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/rtc/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/security -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/spi/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/qspi -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/system -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/timer -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/touch -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/uart -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/utilities/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/vad -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/vad/lib -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/wakeup -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/watchdog -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/wifi -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/wired -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/ipc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/kws -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/kws/libtutuClear -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/rgb -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/mcu8080 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/dvp -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/dma2d -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/jpeg_codec -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/bk7258/config -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/include/modules/securityip -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/include/modules/freetype -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_common/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/common/soc/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/common/hal/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/partitions -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/bk7258/soc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/bk7258/hal -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/bk7258 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/partitions/bk7258 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/partitions -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/cp/config/bk7258 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/boards/bk7258/partitions -IE:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/armino/partitions/_build -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/os_source/freertos_v10/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/os_source/freertos_v10/portable/GCC/ARM_CM33_NTZ/non_secure -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/release -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_startup/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/easy_flash -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/base64 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_init/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/app -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_wifi/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_wifi/include/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/at_server -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/at_server/_at_server -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/at_server/_at_server_port -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_net/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_event -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/include/modules -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_netif/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_cli/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_cli/include/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_cli -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/utf8 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/include/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/include/bk_private/legacy -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/common -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/reset_reason -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/flash -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/uart -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/sys_ctrl -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/gpio -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/general_dma -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/icu -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/sdcard -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/saradc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/pmu -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/mailbox -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/spinlock -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/touch -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/sbc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/rtc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/i2s -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/fft -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/chip_support -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/compal/common_io/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/wdt -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/timer -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/scr -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/slcd -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/aon_wdt -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/jpeg_enc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/bk7258 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/ckmn -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/arch/cm33/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/arch/cm33/os/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/arch/cm33 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/adc_key -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/controller_if -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/controller_if/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_rtos/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_rtos/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/cmsis/CMSIS_5/CMSIS/Core/Include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/cmsis/CMSIS_5/Device/Beken/bk7236xx/Include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/cmsis/CMSIS_5/Device/Beken/bk7236xx/Include/Template -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/cmsis/CMSIS_5/Device/Beken/armstar -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_ps/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/lwip_intf_v2_1/lwip-2.1.2/src -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/lwip_intf_v2_1/lwip-2.1.2/port -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/lwip_intf_v2_1/lwip-2.1.2/src/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/lwip_intf_v2_1/lwip-2.1.2/src/include/netif -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/lwip_intf_v2_1/lwip-2.1.2/src/include/lwip -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/lwip_intf_v2_1/lwip-2.1.2/src/include/lwip/priv -mcpu=cortex-m33+nodsp -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcmse -DWIFI_BLE_COEXIST -DCONFIG_CMAKE=1 -DBK_MAC=1 -Wl,--gc-sections -nostdlib -Wl,-wrap,malloc -Wl,-wrap,_malloc_r -Wl,-wrap,free -Wl,-wrap,_free_r -Wl,-wrap,zalloc -Wl,-wrap,calloc -Wl,-wrap,realloc  -Wl,-wrap,_realloc_r -Wl,-wrap,printf -Wl,-wrap,vsnprintf -Wl,-wrap,snprintf -Wl,-wrap,sprintf -Wl,-wrap,puts -Wl,-wrap,__assert_func -g -Os -nostdlib -Wall -Werror -Wno-address -Wno-array-bounds -Wno-format -Wno-unknown-pragmas -Wno-address-of-packed-member -Wno-deprecated-declarations -Wno-unused-value -Wno-unused-function -fno-builtin-printf -ffunction-sections -fsigned-char -fdata-sections -fno-strict-aliasing -ggdb -mcpu=cortex-m33+nodsp -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcmse -fstack-protector -IE:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/config -includesdkconfig.h -includeE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/partitions/ram_regions.h -Wno-builtin-macro-redefined -Wno-error -std=gnu99 -Wno-old-style-declaration "-Wl, --gc-sections" -DBK_SUPPLICANT=1 -D_GNU_SOURCE -DAPP_VERSION=\"1.0.0\" -DLIB_HASH=\"9c9c389f19fa7c6ee33018459c75c6f6\" -DARMINO_SOC=bk7258 -DBEKEN_PLATFORM -DCONFIG_RELEASE_VERSION=1 -MD -MT armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_mutex.c.obj -MF armino\tuyaos_adapter\CMakeFiles\__armino_tuyaos_adapter.dir\src\system\tkl_mutex.c.obj.d -o armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_mutex.c.obj -c E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/system/tkl_mutex.c
+In file included from E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/system/tkl_mutex.h:13,
+                 from E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/system/tkl_mutex.c:11:
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/utilities/include/tuya_cloud_types.h:9:10: fatal error: tuya_iot_config.h: No such file or directory
+    9 | #include "tuya_iot_config.h"
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+[541/601] Building C object armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_memory.c.obj
+FAILED: [code=1] armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_memory.c.obj 
+E:\TuyaOpen\DuckyClaw\TuyaOpen\platform\tools\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe -D__FILE__=\"E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/system/tkl_memory.c\" -IE:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/config -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/misc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/adc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/atomic -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/bluetooth -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/cellular -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/flash -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/gpio -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/hci -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/i2c -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/i2s -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/init/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/media -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/network -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/pinmux -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/pwm -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/rtc/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/security -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/spi/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/qspi -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/system -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/timer -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/touch -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/uart -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/utilities/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/vad -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/vad/lib -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/wakeup -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/watchdog -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/wifi -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/wired -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/ipc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/kws -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/kws/libtutuClear -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/rgb -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/mcu8080 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/dvp -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/dma2d -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/jpeg_codec -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/bk7258/config -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/include/modules/securityip -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/include/modules/freetype -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_common/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/common/soc/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/common/hal/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/partitions -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/bk7258/soc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/bk7258/hal -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/soc/bk7258 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/partitions/bk7258 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/partitions -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/projects/tuya_app/cp/config/bk7258 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/boards/bk7258/partitions -IE:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/armino/partitions/_build -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/os_source/freertos_v10/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/os_source/freertos_v10/portable/GCC/ARM_CM33_NTZ/non_secure -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/release -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_startup/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/easy_flash -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/base64 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_init/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/app -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_wifi/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_wifi/include/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/at_server -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/at_server/_at_server -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/at_server/_at_server_port -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_net/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_event -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/include/modules -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_netif/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_cli/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_cli/include/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_cli -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/utf8 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/include/bk_private -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/include/bk_private/legacy -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/common -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/reset_reason -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/flash -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/uart -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/sys_ctrl -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/gpio -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/general_dma -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/icu -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/sdcard -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/saradc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/pmu -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/mailbox -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/spinlock -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/touch -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/sbc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/rtc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/i2s -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/fft -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/chip_support -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/compal/common_io/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/wdt -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/timer -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/scr -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/slcd -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/aon_wdt -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/jpeg_enc -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/bk7258 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/driver/ckmn -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/arch/cm33/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/arch/cm33/os/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/middleware/arch/cm33 -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/adc_key -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/controller_if -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/controller_if/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_rtos/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_rtos/freertos -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/cmsis/CMSIS_5/CMSIS/Core/Include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/cmsis/CMSIS_5/Device/Beken/bk7236xx/Include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/cmsis/CMSIS_5/Device/Beken/bk7236xx/Include/Template -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/cmsis/CMSIS_5/Device/Beken/armstar -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/bk_ps/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/lwip_intf_v2_1/lwip-2.1.2/src -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/lwip_intf_v2_1/lwip-2.1.2/port -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/lwip_intf_v2_1/lwip-2.1.2/src/include -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/lwip_intf_v2_1/lwip-2.1.2/src/include/netif -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/lwip_intf_v2_1/lwip-2.1.2/src/include/lwip -IE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp/components/lwip_intf_v2_1/lwip-2.1.2/src/include/lwip/priv -mcpu=cortex-m33+nodsp -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcmse -DWIFI_BLE_COEXIST -DCONFIG_CMAKE=1 -DBK_MAC=1 -Wl,--gc-sections -nostdlib -Wl,-wrap,malloc -Wl,-wrap,_malloc_r -Wl,-wrap,free -Wl,-wrap,_free_r -Wl,-wrap,zalloc -Wl,-wrap,calloc -Wl,-wrap,realloc  -Wl,-wrap,_realloc_r -Wl,-wrap,printf -Wl,-wrap,vsnprintf -Wl,-wrap,snprintf -Wl,-wrap,sprintf -Wl,-wrap,puts -Wl,-wrap,__assert_func -g -Os -nostdlib -Wall -Werror -Wno-address -Wno-array-bounds -Wno-format -Wno-unknown-pragmas -Wno-address-of-packed-member -Wno-deprecated-declarations -Wno-unused-value -Wno-unused-function -fno-builtin-printf -ffunction-sections -fsigned-char -fdata-sections -fno-strict-aliasing -ggdb -mcpu=cortex-m33+nodsp -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcmse -fstack-protector -IE:/tuyaopen/duckyclaw/tuyaopen/platform/t5ai/t5_os/build/bk7258/tuya_app/bk7258/config -includesdkconfig.h -includeE:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/build/bk7258/tuya_app/partitions/ram_regions.h -Wno-builtin-macro-redefined -Wno-error -std=gnu99 -Wno-old-style-declaration "-Wl, --gc-sections" -DBK_SUPPLICANT=1 -D_GNU_SOURCE -DAPP_VERSION=\"1.0.0\" -DLIB_HASH=\"9c9c389f19fa7c6ee33018459c75c6f6\" -DARMINO_SOC=bk7258 -DBEKEN_PLATFORM -DCONFIG_RELEASE_VERSION=1 -MD -MT armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_memory.c.obj -MF armino\tuyaos_adapter\CMakeFiles\__armino_tuyaos_adapter.dir\src\system\tkl_memory.c.obj.d -o armino/tuyaos_adapter/CMakeFiles/__armino_tuyaos_adapter.dir/src/system/tkl_memory.c.obj -c E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/system/tkl_memory.c
+In file included from E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/system/tkl_memory.h:13,
+                 from E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/src/system/tkl_memory.c:12:
+E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/tuyaos/tuyaos_adapter/include/utilities/include/tuya_cloud_types.h:9:10: fatal error: tuya_iot_config.h: No such file or directory
+    9 | #include "tuya_iot_config.h"
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+[542/601] Building C object armino/os_source/CMakeFiles/__armino_os_source.dir/freertos_v10/timers.c.obj
+[543/601] Building C object armino/os_source/CMakeFiles/__armino_os_source.dir/freertos_v10/stream_buffer.c.obj
+[544/601] Building C object armino/coredump/CMakeFiles/__armino_coredump.dir/cm_backtrace/cm_backtrace.c.obj
+[545/601] Building C object armino/bk_rtos/CMakeFiles/__armino_bk_rtos.dir/freertos/v10/rtos_debug.c.obj
+[546/601] Linking C static library armino\unity\libunity.a
+[547/601] Building C object armino/os_source/CMakeFiles/__armino_os_source.dir/freertos_v10/queue.c.obj
+[548/601] Building C object armino/bk_rtos/CMakeFiles/__armino_bk_rtos.dir/rtos_ext.c.obj
+[549/601] Building C object armino/os_source/CMakeFiles/__armino_os_source.dir/freertos_v10/portable/GCC/ARM_CM33_NTZ/non_secure/port.c.obj
+[550/601] Building C object armino/bk_rtos/CMakeFiles/__armino_bk_rtos.dir/freertos/mem_arch.c.obj
+[551/601] Building C object armino/bk_rtos/CMakeFiles/__armino_bk_rtos.dir/platform_stub.c.obj
+[552/601] Building C object armino/bk_rtos/CMakeFiles/__armino_bk_rtos.dir/freertos/str_arch.c.obj
+[553/601] Building C object armino/os_source/CMakeFiles/__armino_os_source.dir/freertos_v10/portable/MemMang/heap_4.c.obj
+[554/601] Building C object armino/bk_rtos/CMakeFiles/__armino_bk_rtos.dir/freertos/posix/freertos_impl/source/pthread_local_storage.c.obj
+[555/601] Building C object armino/utf8/CMakeFiles/__armino_utf8.dir/conv_utf8.c.obj
+[556/601] Building C object armino/bk_rtos/CMakeFiles/__armino_bk_rtos.dir/freertos/v10/rtos_pub.c.obj
+[557/601] Building C object armino/os_source/CMakeFiles/__armino_os_source.dir/freertos_v10/tasks.c.obj
+ninja: build stopped: subcommand failed.
+ninja failed with exit code 1
+Executing action: all (aliases: build)
+Running ninja in directory e:\tuyaopen\duckyclaw\tuyaopen\platform\t5ai\t5_os\build\bk7258\tuya_app\bk7258
+Executing "ninja all"...
+make[1]: *** [E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/tools/build_tools/build_files/build_main.mk:128: bk7258] Error 2
+make[1]: Leaving directory 'E:/TuyaOpen/DuckyClaw/TuyaOpen/platform/T5AI/t5_os/cp'
+make: *** [tools/build_main.mk:115: bk7258_cp] Error 2
+make failed, 2
